@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span data-translate="eheartApp.eheart.detail.title">Eheart</span> {{vm.eheart.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.eheart.name">Name</span></dt>
+        <dd>
+            <span>{{vm.eheart.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.description">Description</span></dt>
+        <dd>
+            <span>{{vm.eheart.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.logo">Logo</span></dt>
+        <dd>
+            <span>{{vm.eheart.logo}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.email">Email</span></dt>
+        <dd>
+            <span>{{vm.eheart.email}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.phone">Phone</span></dt>
+        <dd>
+            <span>{{vm.eheart.phone}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.fax">Fax</span></dt>
+        <dd>
+            <span>{{vm.eheart.fax}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.address">Address</span></dt>
+        <dd>
+            <span>{{vm.eheart.address}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.wechat">Wechat</span></dt>
+        <dd>
+            <span>{{vm.eheart.wechat}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.copyright">Copyright</span></dt>
+        <dd>
+            <span>{{vm.eheart.copyright}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.eheartPlaceholder1">Eheart Placeholder 1</span></dt>
+        <dd>
+            <span>{{vm.eheart.eheartPlaceholder1}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.eheartPlaceholder2">Eheart Placeholder 2</span></dt>
+        <dd>
+            <span>{{vm.eheart.eheartPlaceholder2}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.eheartPlaceholder3">Eheart Placeholder 3</span></dt>
+        <dd>
+            <span>{{vm.eheart.eheartPlaceholder3}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.eheart.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.eheart.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.eheart.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.eheart.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.eheart.lastModifiedBy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="eheart-detail.edit({id:vm.eheart.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

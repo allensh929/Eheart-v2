@@ -1,0 +1,48 @@
+{
+    "eheartApp": {
+        "product" : {
+            "home": {
+                "title": "Products",
+                "createLabel": "Create a new Product",
+                "createOrEditLabel": "Create or edit a Product",
+                "search": "Search for Product"
+            },
+            "created": "A new Product is created with identifier {{ param }}",
+            "updated": "A Product is updated with identifier {{ param }}",
+            "deleted": "A Product is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product {{ id }}?"
+            },
+            "detail": {
+                "title": "Product"
+            },
+            "name": "Name",
+            "description": "Description",
+            "img": "Img",
+            "link": "Link",
+            "price": "Price",
+            "shelfLife": "Shelf Life",
+            "produceDate": "Produce Date",
+            "producer": "Producer",
+            "produceLoaction": "Produce Loaction",
+            "guige": "Guige",
+            "chengfen": "Chengfen",
+            "yongfa": "Yongfa",
+            "xingzhuang": "Xingzhuang",
+            "gongneng": "Gongneng",
+            "pihao": "Pihao",
+            "buliangfanying": "Buliangfanying",
+            "notes": "Notes",
+            "inventory": "Inventory",
+            "total": "Total",
+            "productPlaceholder1": "Product Placeholder 1",
+            "productPlaceholder2": "Product Placeholder 2",
+            "productPlaceholder3": "Product Placeholder 3",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By",
+            "myCategorys": "My Categorys"
+        }
+    }
+}

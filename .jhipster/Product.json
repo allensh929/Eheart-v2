@@ -1,0 +1,127 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "hasProducts",
+            "relationshipName": "myCategorys",
+            "otherEntityName": "productCategory",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "img",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "link",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "shelfLife",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produceDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "producer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produceLoaction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "guige",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chengfen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "yongfa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "xingzhuang",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gongneng",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pihao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "buliangfanying",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "inventory",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "productPlaceholder1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productPlaceholder2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productPlaceholder3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161230164124",
+    "entityTableName": "product",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

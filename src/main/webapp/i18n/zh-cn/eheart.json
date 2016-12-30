@@ -1,0 +1,37 @@
+{
+    "eheartApp": {
+        "eheart" : {
+            "home": {
+                "title": "Ehearts",
+                "createLabel": "Create a new Eheart",
+                "createOrEditLabel": "Create or edit a Eheart",
+                "search": "Search for Eheart"
+            },
+            "created": "A new Eheart is created with identifier {{ param }}",
+            "updated": "A Eheart is updated with identifier {{ param }}",
+            "deleted": "A Eheart is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Eheart {{ id }}?"
+            },
+            "detail": {
+                "title": "Eheart"
+            },
+            "name": "Name",
+            "description": "Description",
+            "logo": "Logo",
+            "email": "Email",
+            "phone": "Phone",
+            "fax": "Fax",
+            "address": "Address",
+            "wechat": "Wechat",
+            "copyright": "Copyright",
+            "eheartPlaceholder1": "Eheart Placeholder 1",
+            "eheartPlaceholder2": "Eheart Placeholder 2",
+            "eheartPlaceholder3": "Eheart Placeholder 3",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By"
+        }
+    }
+}

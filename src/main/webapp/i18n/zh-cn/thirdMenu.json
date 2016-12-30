@@ -1,0 +1,30 @@
+{
+    "eheartApp": {
+        "thirdMenu" : {
+            "home": {
+                "title": "Third Menus",
+                "createLabel": "Create a new Third Menu",
+                "createOrEditLabel": "Create or edit a Third Menu",
+                "search": "Search for Third Menu"
+            },
+            "created": "A new Third Menu is created with identifier {{ param }}",
+            "updated": "A Third Menu is updated with identifier {{ param }}",
+            "deleted": "A Third Menu is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Third Menu {{ id }}?"
+            },
+            "detail": {
+                "title": "Third Menu"
+            },
+            "name": "Name",
+            "description": "Description",
+            "seq": "Seq",
+            "link": "Link",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By",
+            "superMenu": "Super Menu"
+        }
+    }
+}

@@ -1,0 +1,129 @@
+
+<div>
+    <h2><span data-translate="eheartApp.product.detail.title">Product</span> {{vm.product.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.product.name">Name</span></dt>
+        <dd>
+            <span>{{vm.product.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.description">Description</span></dt>
+        <dd>
+            <span>{{vm.product.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.img">Img</span></dt>
+        <dd>
+            <span>{{vm.product.img}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.link">Link</span></dt>
+        <dd>
+            <span>{{vm.product.link}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.price">Price</span></dt>
+        <dd>
+            <span>{{vm.product.price}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.shelfLife">Shelf Life</span></dt>
+        <dd>
+            <span>{{vm.product.shelfLife}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.produceDate">Produce Date</span></dt>
+        <dd>
+            <span>{{vm.product.produceDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.producer">Producer</span></dt>
+        <dd>
+            <span>{{vm.product.producer}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.produceLoaction">Produce Loaction</span></dt>
+        <dd>
+            <span>{{vm.product.produceLoaction}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.guige">Guige</span></dt>
+        <dd>
+            <span>{{vm.product.guige}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.chengfen">Chengfen</span></dt>
+        <dd>
+            <span>{{vm.product.chengfen}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.yongfa">Yongfa</span></dt>
+        <dd>
+            <span>{{vm.product.yongfa}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.xingzhuang">Xingzhuang</span></dt>
+        <dd>
+            <span>{{vm.product.xingzhuang}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.gongneng">Gongneng</span></dt>
+        <dd>
+            <span>{{vm.product.gongneng}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.pihao">Pihao</span></dt>
+        <dd>
+            <span>{{vm.product.pihao}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.buliangfanying">Buliangfanying</span></dt>
+        <dd>
+            <span>{{vm.product.buliangfanying}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.notes">Notes</span></dt>
+        <dd>
+            <span>{{vm.product.notes}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.inventory">Inventory</span></dt>
+        <dd>
+            <span>{{vm.product.inventory}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.total">Total</span></dt>
+        <dd>
+            <span>{{vm.product.total}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.productPlaceholder1">Product Placeholder 1</span></dt>
+        <dd>
+            <span>{{vm.product.productPlaceholder1}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.productPlaceholder2">Product Placeholder 2</span></dt>
+        <dd>
+            <span>{{vm.product.productPlaceholder2}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.productPlaceholder3">Product Placeholder 3</span></dt>
+        <dd>
+            <span>{{vm.product.productPlaceholder3}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.product.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.product.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.product.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.product.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.product.myCategorys">My Categorys</span></dt>
+        <dd>
+            <span ng-repeat="myCategorys in vm.product.myCategorys">
+                <a ui-sref="product-category-detail({id: myCategorys.id})">{{myCategorys.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="product-detail.edit({id:vm.product.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

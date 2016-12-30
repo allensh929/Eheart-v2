@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="eheartApp.subMenu.detail.title">Sub Menu</span> {{vm.subMenu.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.subMenu.name">Name</span></dt>
+        <dd>
+            <span>{{vm.subMenu.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.description">Description</span></dt>
+        <dd>
+            <span>{{vm.subMenu.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.seq">Seq</span></dt>
+        <dd>
+            <span>{{vm.subMenu.seq}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.link">Link</span></dt>
+        <dd>
+            <span>{{vm.subMenu.link}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.subMenu.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.subMenu.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.subMenu.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.subMenu.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.subMenu.superMenu">Super Menu</span></dt>
+        <dd>
+            <a ui-sref="menu-detail({id:vm.subMenu.superMenuId})">{{vm.subMenu.superMenuId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="sub-menu-detail.edit({id:vm.subMenu.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

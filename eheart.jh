@@ -97,7 +97,7 @@ relationship OneToMany {
 	SubMenu{hasSubMenu} to ThirdMenu{superMenu}
 }
 relationship ManyToMany {
-  Product{myCategorys} to ProductCategory{hasProducts},
+  Product{myCategorys} to ProductCategory{hasProducts}
 }
 
 paginate * with pagination

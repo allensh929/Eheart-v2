@@ -20,5 +20,25 @@
 
     <cache alias="com.eheart.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="com.eheart.domain.ProductCategory" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.ProductCategory.hasProducts" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Product" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Product.myCategorys" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Eheart" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Menu" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Menu.hasSubMenus" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.SubMenu" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.SubMenu.hasSubMenus" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.ThirdMenu" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

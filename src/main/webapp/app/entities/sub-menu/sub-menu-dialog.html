@@ -1,0 +1,94 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySubMenuLabel" data-translate="eheartApp.subMenu.home.createOrEditLabel">Create or edit a Sub Menu</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.subMenu.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.subMenu.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.subMenu.name"
+                    required />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.subMenu.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.seq" for="field_seq">Seq</label>
+            <input type="number" class="form-control" name="seq" id="field_seq"
+                    ng-model="vm.subMenu.seq"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.link" for="field_link">Link</label>
+            <input type="text" class="form-control" name="link" id="field_link"
+                    ng-model="vm.subMenu.link"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.createdDate" for="field_createdDate">Created Date</label>
+                <div class="input-group">
+                    <input id="field_createdDate" type="text" class="form-control" name="createdDate" datetime-picker="{{dateformat}}" ng-model="vm.subMenu.createdDate" is-open="vm.datePickerOpenStatus.createdDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.createdBy" for="field_createdBy">Created By</label>
+            <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                    ng-model="vm.subMenu.createdBy"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.lastModifiedDate" for="field_lastModifiedDate">Last Modified Date</label>
+                <div class="input-group">
+                    <input id="field_lastModifiedDate" type="text" class="form-control" name="lastModifiedDate" datetime-picker="{{dateformat}}" ng-model="vm.subMenu.lastModifiedDate" is-open="vm.datePickerOpenStatus.lastModifiedDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastModifiedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.subMenu.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>
+            <input type="text" class="form-control" name="lastModifiedBy" id="field_lastModifiedBy"
+                    ng-model="vm.subMenu.lastModifiedBy"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="eheartApp.subMenu.superMenu" for="field_superMenu">Super Menu</label>
+            <select class="form-control" id="field_superMenu" name="superMenu" ng-model="vm.subMenu.superMenuId" ng-options="menu.id as menu.name for menu in vm.menus"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

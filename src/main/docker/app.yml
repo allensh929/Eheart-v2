@@ -24,13 +24,13 @@ services:
         extends:
             file: elasticsearch.yml
             service: eheart-elasticsearch
-    kafka:
-        extends:
-            file: kafka.yml
-            service: kafka
-        environment:
-            - KAFKA_ADVERTISED_HOST_NAME=kafka
-    zookeeper:
-        extends:
-            file: kafka.yml
-            service: zookeeper
+#    kafka:
+#        extends:
+#            file: kafka.yml
+#            service: kafka
+#        environment:
+#            - KAFKA_ADVERTISED_HOST_NAME=kafka
+#    zookeeper:
+#        extends:
+#            file: kafka.yml
+#            service: zookeeper

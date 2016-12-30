@@ -1,0 +1,107 @@
+<div>
+    <h2 data-translate="eheartApp.eheart.home.title">Ehearts</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="eheart.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="eheartApp.eheart.home.createLabel">
+                        Create new Eheart
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'eheartApp.eheart.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span data-translate="eheartApp.eheart.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span data-translate="eheartApp.eheart.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="logo"><span data-translate="eheartApp.eheart.logo">Logo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="eheartApp.eheart.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span data-translate="eheartApp.eheart.phone">Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fax"><span data-translate="eheartApp.eheart.fax">Fax</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address"><span data-translate="eheartApp.eheart.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="wechat"><span data-translate="eheartApp.eheart.wechat">Wechat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="copyright"><span data-translate="eheartApp.eheart.copyright">Copyright</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eheartPlaceholder1"><span data-translate="eheartApp.eheart.eheartPlaceholder1">Eheart Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eheartPlaceholder2"><span data-translate="eheartApp.eheart.eheartPlaceholder2">Eheart Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eheartPlaceholder3"><span data-translate="eheartApp.eheart.eheartPlaceholder3">Eheart Placeholder 3</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="eheartApp.eheart.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="eheartApp.eheart.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.eheart.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.eheart.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="eheart in vm.ehearts track by eheart.id">
+                    <td><a ui-sref="eheart-detail({id:eheart.id})">{{eheart.id}}</a></td>
+                    <td>{{eheart.name}}</td>
+                    <td>{{eheart.description}}</td>
+                    <td>{{eheart.logo}}</td>
+                    <td>{{eheart.email}}</td>
+                    <td>{{eheart.phone}}</td>
+                    <td>{{eheart.fax}}</td>
+                    <td>{{eheart.address}}</td>
+                    <td>{{eheart.wechat}}</td>
+                    <td>{{eheart.copyright}}</td>
+                    <td>{{eheart.eheartPlaceholder1}}</td>
+                    <td>{{eheart.eheartPlaceholder2}}</td>
+                    <td>{{eheart.eheartPlaceholder3}}</td>
+                    <td>{{eheart.createdDate | date:'medium'}}</td>
+                    <td>{{eheart.createdBy}}</td>
+                    <td>{{eheart.lastModifiedDate | date:'medium'}}</td>
+                    <td>{{eheart.lastModifiedBy}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="eheart-detail({id:eheart.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="eheart.edit({id:eheart.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="eheart.delete({id:eheart.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

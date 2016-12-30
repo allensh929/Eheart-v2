@@ -28,6 +28,7 @@
     "languages": [
       "zh-cn",
       "en"
-    ]
+    ],
+    "serviceDiscoveryType": false
   }
 }

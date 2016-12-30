@@ -17,21 +17,21 @@ spring:
             enabled: false
         livereload:
             enabled: false
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
+#    cloud:
+#        stream:
+#            kafka:
+#                binder:
+#                    brokers: localhost
+#                    zk-nodes: localhost
+#            bindings:
+#                output:
+#                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
-        password:
+        password: root
         hikari:
             data-source-properties:
                 cachePrepStmts: true

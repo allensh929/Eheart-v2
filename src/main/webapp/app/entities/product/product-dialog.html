@@ -1,0 +1,204 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProductLabel" data-translate="eheartApp.product.home.createOrEditLabel">Create or edit a Product</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.product.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.product.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.product.name"
+                    required />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.product.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.img" for="field_img">Img</label>
+            <input type="text" class="form-control" name="img" id="field_img"
+                    ng-model="vm.product.img"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.link" for="field_link">Link</label>
+            <input type="text" class="form-control" name="link" id="field_link"
+                    ng-model="vm.product.link"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.product.price"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.shelfLife" for="field_shelfLife">Shelf Life</label>
+            <input type="text" class="form-control" name="shelfLife" id="field_shelfLife"
+                    ng-model="vm.product.shelfLife"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.produceDate" for="field_produceDate">Produce Date</label>
+                <div class="input-group">
+                    <input id="field_produceDate" type="text" class="form-control" name="produceDate" datetime-picker="{{dateformat}}" ng-model="vm.product.produceDate" is-open="vm.datePickerOpenStatus.produceDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('produceDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.producer" for="field_producer">Producer</label>
+            <input type="text" class="form-control" name="producer" id="field_producer"
+                    ng-model="vm.product.producer"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.produceLoaction" for="field_produceLoaction">Produce Loaction</label>
+            <input type="text" class="form-control" name="produceLoaction" id="field_produceLoaction"
+                    ng-model="vm.product.produceLoaction"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.guige" for="field_guige">Guige</label>
+            <input type="text" class="form-control" name="guige" id="field_guige"
+                    ng-model="vm.product.guige"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.chengfen" for="field_chengfen">Chengfen</label>
+            <input type="text" class="form-control" name="chengfen" id="field_chengfen"
+                    ng-model="vm.product.chengfen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.yongfa" for="field_yongfa">Yongfa</label>
+            <input type="text" class="form-control" name="yongfa" id="field_yongfa"
+                    ng-model="vm.product.yongfa"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.xingzhuang" for="field_xingzhuang">Xingzhuang</label>
+            <input type="text" class="form-control" name="xingzhuang" id="field_xingzhuang"
+                    ng-model="vm.product.xingzhuang"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.gongneng" for="field_gongneng">Gongneng</label>
+            <input type="text" class="form-control" name="gongneng" id="field_gongneng"
+                    ng-model="vm.product.gongneng"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.pihao" for="field_pihao">Pihao</label>
+            <input type="text" class="form-control" name="pihao" id="field_pihao"
+                    ng-model="vm.product.pihao"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.buliangfanying" for="field_buliangfanying">Buliangfanying</label>
+            <input type="text" class="form-control" name="buliangfanying" id="field_buliangfanying"
+                    ng-model="vm.product.buliangfanying"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.notes" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="vm.product.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.inventory" for="field_inventory">Inventory</label>
+            <input type="number" class="form-control" name="inventory" id="field_inventory"
+                    ng-model="vm.product.inventory"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.total" for="field_total">Total</label>
+            <input type="number" class="form-control" name="total" id="field_total"
+                    ng-model="vm.product.total"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.productPlaceholder1" for="field_productPlaceholder1">Product Placeholder 1</label>
+            <input type="text" class="form-control" name="productPlaceholder1" id="field_productPlaceholder1"
+                    ng-model="vm.product.productPlaceholder1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.productPlaceholder2" for="field_productPlaceholder2">Product Placeholder 2</label>
+            <input type="text" class="form-control" name="productPlaceholder2" id="field_productPlaceholder2"
+                    ng-model="vm.product.productPlaceholder2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.productPlaceholder3" for="field_productPlaceholder3">Product Placeholder 3</label>
+            <input type="text" class="form-control" name="productPlaceholder3" id="field_productPlaceholder3"
+                    ng-model="vm.product.productPlaceholder3"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.createdDate" for="field_createdDate">Created Date</label>
+                <div class="input-group">
+                    <input id="field_createdDate" type="text" class="form-control" name="createdDate" datetime-picker="{{dateformat}}" ng-model="vm.product.createdDate" is-open="vm.datePickerOpenStatus.createdDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.createdBy" for="field_createdBy">Created By</label>
+            <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                    ng-model="vm.product.createdBy"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.lastModifiedDate" for="field_lastModifiedDate">Last Modified Date</label>
+                <div class="input-group">
+                    <input id="field_lastModifiedDate" type="text" class="form-control" name="lastModifiedDate" datetime-picker="{{dateformat}}" ng-model="vm.product.lastModifiedDate" is-open="vm.datePickerOpenStatus.lastModifiedDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastModifiedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>
+            <input type="text" class="form-control" name="lastModifiedBy" id="field_lastModifiedBy"
+                    ng-model="vm.product.lastModifiedBy"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="eheartApp.product.myCategorys" for="field_myCategorys">My Categorys</label>
+            <select class="form-control" id="field_myCategorys" multiple name="myCategorys" ng-model="vm.product.myCategorys" ng-options="productCategory as productCategory.name for productCategory in vm.productcategories track by productCategory.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

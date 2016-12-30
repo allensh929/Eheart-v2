@@ -1,0 +1,136 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEheartLabel" data-translate="eheartApp.eheart.home.createOrEditLabel">Create or edit a Eheart</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.eheart.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.eheart.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.eheart.name"
+                    required />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.eheart.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.logo" for="field_logo">Logo</label>
+            <input type="text" class="form-control" name="logo" id="field_logo"
+                    ng-model="vm.eheart.logo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.eheart.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.phone" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.eheart.phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.fax" for="field_fax">Fax</label>
+            <input type="text" class="form-control" name="fax" id="field_fax"
+                    ng-model="vm.eheart.fax"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.eheart.address"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.wechat" for="field_wechat">Wechat</label>
+            <input type="text" class="form-control" name="wechat" id="field_wechat"
+                    ng-model="vm.eheart.wechat"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.copyright" for="field_copyright">Copyright</label>
+            <input type="text" class="form-control" name="copyright" id="field_copyright"
+                    ng-model="vm.eheart.copyright"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.eheartPlaceholder1" for="field_eheartPlaceholder1">Eheart Placeholder 1</label>
+            <input type="text" class="form-control" name="eheartPlaceholder1" id="field_eheartPlaceholder1"
+                    ng-model="vm.eheart.eheartPlaceholder1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.eheartPlaceholder2" for="field_eheartPlaceholder2">Eheart Placeholder 2</label>
+            <input type="text" class="form-control" name="eheartPlaceholder2" id="field_eheartPlaceholder2"
+                    ng-model="vm.eheart.eheartPlaceholder2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.eheartPlaceholder3" for="field_eheartPlaceholder3">Eheart Placeholder 3</label>
+            <input type="text" class="form-control" name="eheartPlaceholder3" id="field_eheartPlaceholder3"
+                    ng-model="vm.eheart.eheartPlaceholder3"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.createdDate" for="field_createdDate">Created Date</label>
+                <div class="input-group">
+                    <input id="field_createdDate" type="text" class="form-control" name="createdDate" datetime-picker="{{dateformat}}" ng-model="vm.eheart.createdDate" is-open="vm.datePickerOpenStatus.createdDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.createdBy" for="field_createdBy">Created By</label>
+            <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                    ng-model="vm.eheart.createdBy"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.lastModifiedDate" for="field_lastModifiedDate">Last Modified Date</label>
+                <div class="input-group">
+                    <input id="field_lastModifiedDate" type="text" class="form-control" name="lastModifiedDate" datetime-picker="{{dateformat}}" ng-model="vm.eheart.lastModifiedDate" is-open="vm.datePickerOpenStatus.lastModifiedDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastModifiedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.eheart.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>
+            <input type="text" class="form-control" name="lastModifiedBy" id="field_lastModifiedBy"
+                    ng-model="vm.eheart.lastModifiedBy"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

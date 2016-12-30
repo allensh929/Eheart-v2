@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="eheartApp.thirdMenu.detail.title">Third Menu</span> {{vm.thirdMenu.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.thirdMenu.name">Name</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.description">Description</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.seq">Seq</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.seq}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.link">Link</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.link}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.thirdMenu.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.thirdMenu.superMenu">Super Menu</span></dt>
+        <dd>
+            <a ui-sref="sub-menu-detail({id:vm.thirdMenu.superMenuId})">{{vm.thirdMenu.superMenuId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="third-menu-detail.edit({id:vm.thirdMenu.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

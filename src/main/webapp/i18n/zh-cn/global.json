@@ -7,6 +7,12 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "数据",
+                "productCategory": "Product Category",
+                "product": "Product",
+                "eheart": "Eheart",
+                "menu": "Menu",
+                "subMenu": "Sub Menu",
+                "thirdMenu": "Third Menu",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
