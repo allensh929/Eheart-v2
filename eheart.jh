@@ -1,0 +1,105 @@
+entity ProductCategory {
+	name String required,
+	description String,
+	categoryPlaceholder1 String,
+	categoryPlaceholder2 String,
+	categoryPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Product {
+	name String required,
+	description String,
+	img String,
+	link String,
+	price Double,
+	shelfLife String,
+	produceDate ZonedDateTime,
+	producer String,
+	produceLoaction String,
+	guige String,
+	chengfen String,
+	yongfa String,
+	xingzhuang String,
+	gongneng String,
+	pihao String,
+	buliangfanying String,
+	notes String,
+	inventory Integer,
+	total Integer,
+	productPlaceholder1 String,
+	productPlaceholder2 String,
+	productPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Eheart {
+	name String required,
+	description String,
+	logo String,
+	email String,
+	phone String,
+	fax String,
+	address String,
+	wechat String,
+	copyright String,
+	eheartPlaceholder1 String,
+	eheartPlaceholder2 String,
+	eheartPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Menu {
+	name String required,
+	description String,
+	seq Integer,
+	link String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity SubMenu {
+	name String required,
+	description String,
+	seq Integer,
+	link String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity ThirdMenu {
+	name String required,
+	description String,
+	seq Integer,
+	link String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+
+relationship OneToMany {
+	Menu{hasSubMenu} to SubMenu{superMenu},
+	SubMenu{hasSubMenu} to ThirdMenu{superMenu}
+}
+relationship ManyToMany {
+  Product{myCategorys} to ProductCategory{hasProducts},
+}
+
+paginate * with pagination
+dto * with mapstruct
+service all with serviceImpl

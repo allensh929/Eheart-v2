@@ -1,0 +1,10 @@
+version: '2'
+services:
+    eheart-elasticsearch:
+        container_name: eheart-elasticsearch
+        image: elasticsearch:2.4.1
+        # volumes:
+        #     - ~/volumes/jhipster/eheart/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300
