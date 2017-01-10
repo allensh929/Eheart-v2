@@ -113,3 +113,33 @@ To set up a CI environment, consult the [Setting up Continuous Integration][] pa
 ALTER TABLE `eheart`.`product` 
 ADD COLUMN `is_new` TINYINT(1) NULL DEFAULT 0 AFTER `last_modified_by`,
 ADD COLUMN `favorite` TINYINT(1) NULL DEFAULT 0 AFTER `is_new`;
+
+
+## Deploy Dev
+mvn -DskipTests=true -Pdev package
+
+-DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。
+
+-Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类。
+
+## Mysql
+
+vi /etc/mysql/my.cnf
+
+sudo service mysql restart
+
+授权用户能进行远程连接
+
+mysql -u root -p
+输入mysql密码
+
+grant all privileges on *.* to root@'%' identified by 'EheartSh+12-7' with grant option;
+flush privileges;
+
+## Tomcat
+/opt/tomcat
+
+
+## Nginx
+
+sudo /etc/init.d/nginx stop/start

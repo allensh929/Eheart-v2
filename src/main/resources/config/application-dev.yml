@@ -33,11 +33,13 @@ spring:
 #                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://139.224.44.210:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
-        password: root
+        password: EheartSh+12-7
+#        password: root
         hikari:
+            maximumPoolSize: 100
             data-source-properties:
                 cachePrepStmts: true
                 prepStmtCacheSize: 250
@@ -63,8 +65,8 @@ spring:
             cluster-nodes:
             properties:
                 path:
-                  logs: target/elasticsearch/log
-                  data: target/elasticsearch/data
+                  logs: /usr/local/elasticsearch/log
+                  data: /usr/local/elasticsearch/data
     mail:
         host: localhost
         port: 25
