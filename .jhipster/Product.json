@@ -91,6 +91,14 @@
             "fieldType": "Integer"
         },
         {
+            "fieldName": "isNew",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "favorite",
+            "fieldType": "Boolean"
+        },
+        {
             "fieldName": "productPlaceholder1",
             "fieldType": "String"
         },

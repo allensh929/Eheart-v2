@@ -149,10 +149,7 @@ public class EheartResourceIntTest {
                 .eheartPlaceholder1(DEFAULT_EHEART_PLACEHOLDER_1)
                 .eheartPlaceholder2(DEFAULT_EHEART_PLACEHOLDER_2)
                 .eheartPlaceholder3(DEFAULT_EHEART_PLACEHOLDER_3)
-                .createdDate(DEFAULT_CREATED_DATE)
-                .createdBy(DEFAULT_CREATED_BY)
-                .lastModifiedDate(DEFAULT_LAST_MODIFIED_DATE)
-                .lastModifiedBy(DEFAULT_LAST_MODIFIED_BY);
+               ;
         return eheart;
     }
 
@@ -330,10 +327,7 @@ public class EheartResourceIntTest {
                 .eheartPlaceholder1(UPDATED_EHEART_PLACEHOLDER_1)
                 .eheartPlaceholder2(UPDATED_EHEART_PLACEHOLDER_2)
                 .eheartPlaceholder3(UPDATED_EHEART_PLACEHOLDER_3)
-                .createdDate(UPDATED_CREATED_DATE)
-                .createdBy(UPDATED_CREATED_BY)
-                .lastModifiedDate(UPDATED_LAST_MODIFIED_DATE)
-                .lastModifiedBy(UPDATED_LAST_MODIFIED_BY);
+               ;
         EheartDTO eheartDTO = eheartMapper.eheartToEheartDTO(updatedEheart);
 
         restEheartMockMvc.perform(put("/api/ehearts")

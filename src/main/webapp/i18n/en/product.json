@@ -35,6 +35,8 @@
             "notes": "Notes",
             "inventory": "Inventory",
             "total": "Total",
+            "isNew": "Is New",
+            "favorite": "Favorite",
             "productPlaceholder1": "Product Placeholder 1",
             "productPlaceholder2": "Product Placeholder 2",
             "productPlaceholder3": "Product Placeholder 3",

@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="eheartApp.domain.detail.title">Domain</span> {{vm.domain.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.domain.name">Name</span></dt>
+        <dd>
+            <span>{{vm.domain.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.domainPlaceholder1">Domain Placeholder 1</span></dt>
+        <dd>
+            <span>{{vm.domain.domainPlaceholder1}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.domainPlaceholder2">Domain Placeholder 2</span></dt>
+        <dd>
+            <span>{{vm.domain.domainPlaceholder2}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.domainPlaceholder3">Domain Placeholder 3</span></dt>
+        <dd>
+            <span>{{vm.domain.domainPlaceholder3}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.domain.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.domain.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.domain.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.domain.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.domain.lastModifiedBy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="domain-detail.edit({id:vm.domain.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

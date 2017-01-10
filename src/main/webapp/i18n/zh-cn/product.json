@@ -2,47 +2,49 @@
     "eheartApp": {
         "product" : {
             "home": {
-                "title": "Products",
-                "createLabel": "Create a new Product",
-                "createOrEditLabel": "Create or edit a Product",
-                "search": "Search for Product"
+                "title": "产品",
+                "createLabel": "添加产品",
+                "createOrEditLabel": "添加/编辑产品",
+                "search": "搜索 产品"
             },
-            "created": "A new Product is created with identifier {{ param }}",
-            "updated": "A Product is updated with identifier {{ param }}",
-            "deleted": "A Product is deleted with identifier {{ param }}",
+            "created": "产品添加成功 {{ param }}",
+            "updated": "产品更新成功 {{ param }}",
+            "deleted": "产品删除成功 {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Product {{ id }}?"
+                "question": "确定删除产品 {{ id }}?"
             },
             "detail": {
-                "title": "Product"
+                "title": "产品"
             },
-            "name": "Name",
-            "description": "Description",
-            "img": "Img",
-            "link": "Link",
-            "price": "Price",
-            "shelfLife": "Shelf Life",
-            "produceDate": "Produce Date",
-            "producer": "Producer",
-            "produceLoaction": "Produce Loaction",
-            "guige": "Guige",
-            "chengfen": "Chengfen",
-            "yongfa": "Yongfa",
-            "xingzhuang": "Xingzhuang",
-            "gongneng": "Gongneng",
-            "pihao": "Pihao",
-            "buliangfanying": "Buliangfanying",
-            "notes": "Notes",
-            "inventory": "Inventory",
-            "total": "Total",
-            "productPlaceholder1": "Product Placeholder 1",
-            "productPlaceholder2": "Product Placeholder 2",
-            "productPlaceholder3": "Product Placeholder 3",
-            "createdDate": "Created Date",
-            "createdBy": "Created By",
-            "lastModifiedDate": "Last Modified Date",
-            "lastModifiedBy": "Last Modified By",
-            "myCategorys": "My Categorys"
+            "name": "名称",
+            "description": "简介",
+            "img": "图片",
+            "link": "链接",
+            "price": "价格",
+            "shelfLife": "有效期",
+            "produceDate": "生产日期",
+            "producer": "生产厂商",
+            "produceLoaction": "产地",
+            "guige": "规格",
+            "chengfen": "成分",
+            "yongfa": "用法用量",
+            "xingzhuang": "性状",
+            "gongneng": "功能",
+            "pihao": "批号",
+            "buliangfanying": "不良反应",
+            "notes": "注意事项",
+            "inventory": "库存",
+            "total": "数量",
+            "isNew": "是否新品",
+            "favorite": "是否热卖",
+            "productPlaceholder1": "Product 占位 1",
+            "productPlaceholder2": "Product 占位 2",
+            "productPlaceholder3": "Product 占位 3",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "myCategorys": "类别"
         }
     }
 }

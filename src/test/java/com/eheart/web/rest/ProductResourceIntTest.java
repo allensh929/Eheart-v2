@@ -103,6 +103,12 @@ public class ProductResourceIntTest {
     private static final Integer DEFAULT_TOTAL = 1;
     private static final Integer UPDATED_TOTAL = 2;
 
+    private static final Boolean DEFAULT_IS_NEW = false;
+    private static final Boolean UPDATED_IS_NEW = true;
+
+    private static final Boolean DEFAULT_FAVORITE = false;
+    private static final Boolean UPDATED_FAVORITE = true;
+
     private static final String DEFAULT_PRODUCT_PLACEHOLDER_1 = "AAAAAAAAAA";
     private static final String UPDATED_PRODUCT_PLACEHOLDER_1 = "BBBBBBBBBB";
 
@@ -186,6 +192,8 @@ public class ProductResourceIntTest {
                 .notes(DEFAULT_NOTES)
                 .inventory(DEFAULT_INVENTORY)
                 .total(DEFAULT_TOTAL)
+                .isNew(DEFAULT_IS_NEW)
+                .favorite(DEFAULT_FAVORITE)
                 .productPlaceholder1(DEFAULT_PRODUCT_PLACEHOLDER_1)
                 .productPlaceholder2(DEFAULT_PRODUCT_PLACEHOLDER_2)
                 .productPlaceholder3(DEFAULT_PRODUCT_PLACEHOLDER_3)
@@ -238,6 +246,8 @@ public class ProductResourceIntTest {
         assertThat(testProduct.getNotes()).isEqualTo(DEFAULT_NOTES);
         assertThat(testProduct.getInventory()).isEqualTo(DEFAULT_INVENTORY);
         assertThat(testProduct.getTotal()).isEqualTo(DEFAULT_TOTAL);
+        assertThat(testProduct.isIsNew()).isEqualTo(DEFAULT_IS_NEW);
+        assertThat(testProduct.isFavorite()).isEqualTo(DEFAULT_FAVORITE);
         assertThat(testProduct.getProductPlaceholder1()).isEqualTo(DEFAULT_PRODUCT_PLACEHOLDER_1);
         assertThat(testProduct.getProductPlaceholder2()).isEqualTo(DEFAULT_PRODUCT_PLACEHOLDER_2);
         assertThat(testProduct.getProductPlaceholder3()).isEqualTo(DEFAULT_PRODUCT_PLACEHOLDER_3);
@@ -321,6 +331,8 @@ public class ProductResourceIntTest {
             .andExpect(jsonPath("$.[*].notes").value(hasItem(DEFAULT_NOTES.toString())))
             .andExpect(jsonPath("$.[*].inventory").value(hasItem(DEFAULT_INVENTORY)))
             .andExpect(jsonPath("$.[*].total").value(hasItem(DEFAULT_TOTAL)))
+            .andExpect(jsonPath("$.[*].isNew").value(hasItem(DEFAULT_IS_NEW.booleanValue())))
+            .andExpect(jsonPath("$.[*].favorite").value(hasItem(DEFAULT_FAVORITE.booleanValue())))
             .andExpect(jsonPath("$.[*].productPlaceholder1").value(hasItem(DEFAULT_PRODUCT_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].productPlaceholder2").value(hasItem(DEFAULT_PRODUCT_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].productPlaceholder3").value(hasItem(DEFAULT_PRODUCT_PLACEHOLDER_3.toString())))
@@ -360,6 +372,8 @@ public class ProductResourceIntTest {
             .andExpect(jsonPath("$.notes").value(DEFAULT_NOTES.toString()))
             .andExpect(jsonPath("$.inventory").value(DEFAULT_INVENTORY))
             .andExpect(jsonPath("$.total").value(DEFAULT_TOTAL))
+            .andExpect(jsonPath("$.isNew").value(DEFAULT_IS_NEW.booleanValue()))
+            .andExpect(jsonPath("$.favorite").value(DEFAULT_FAVORITE.booleanValue()))
             .andExpect(jsonPath("$.productPlaceholder1").value(DEFAULT_PRODUCT_PLACEHOLDER_1.toString()))
             .andExpect(jsonPath("$.productPlaceholder2").value(DEFAULT_PRODUCT_PLACEHOLDER_2.toString()))
             .andExpect(jsonPath("$.productPlaceholder3").value(DEFAULT_PRODUCT_PLACEHOLDER_3.toString()))
@@ -407,6 +421,8 @@ public class ProductResourceIntTest {
                 .notes(UPDATED_NOTES)
                 .inventory(UPDATED_INVENTORY)
                 .total(UPDATED_TOTAL)
+                .isNew(UPDATED_IS_NEW)
+                .favorite(UPDATED_FAVORITE)
                 .productPlaceholder1(UPDATED_PRODUCT_PLACEHOLDER_1)
                 .productPlaceholder2(UPDATED_PRODUCT_PLACEHOLDER_2)
                 .productPlaceholder3(UPDATED_PRODUCT_PLACEHOLDER_3)
@@ -444,6 +460,8 @@ public class ProductResourceIntTest {
         assertThat(testProduct.getNotes()).isEqualTo(UPDATED_NOTES);
         assertThat(testProduct.getInventory()).isEqualTo(UPDATED_INVENTORY);
         assertThat(testProduct.getTotal()).isEqualTo(UPDATED_TOTAL);
+        assertThat(testProduct.isIsNew()).isEqualTo(UPDATED_IS_NEW);
+        assertThat(testProduct.isFavorite()).isEqualTo(UPDATED_FAVORITE);
         assertThat(testProduct.getProductPlaceholder1()).isEqualTo(UPDATED_PRODUCT_PLACEHOLDER_1);
         assertThat(testProduct.getProductPlaceholder2()).isEqualTo(UPDATED_PRODUCT_PLACEHOLDER_2);
         assertThat(testProduct.getProductPlaceholder3()).isEqualTo(UPDATED_PRODUCT_PLACEHOLDER_3);
@@ -529,6 +547,8 @@ public class ProductResourceIntTest {
             .andExpect(jsonPath("$.[*].notes").value(hasItem(DEFAULT_NOTES.toString())))
             .andExpect(jsonPath("$.[*].inventory").value(hasItem(DEFAULT_INVENTORY)))
             .andExpect(jsonPath("$.[*].total").value(hasItem(DEFAULT_TOTAL)))
+            .andExpect(jsonPath("$.[*].isNew").value(hasItem(DEFAULT_IS_NEW.booleanValue())))
+            .andExpect(jsonPath("$.[*].favorite").value(hasItem(DEFAULT_FAVORITE.booleanValue())))
             .andExpect(jsonPath("$.[*].productPlaceholder1").value(hasItem(DEFAULT_PRODUCT_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].productPlaceholder2").value(hasItem(DEFAULT_PRODUCT_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].productPlaceholder3").value(hasItem(DEFAULT_PRODUCT_PLACEHOLDER_3.toString())))

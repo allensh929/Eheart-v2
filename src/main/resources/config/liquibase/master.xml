@@ -11,9 +11,16 @@
     <include file="classpath:config/liquibase/changelog/20161230164126_added_entity_Menu.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161230164127_added_entity_SubMenu.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161230164128_added_entity_ThirdMenu.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131833_added_entity_Domain.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131834_added_entity_Doctor.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131835_added_entity_Title.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131836_added_entity_Hospital.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131837_added_entity_Department.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20161230164124_added_entity_constraints_Product.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161230164127_added_entity_constraints_SubMenu.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161230164128_added_entity_constraints_ThirdMenu.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131834_added_entity_constraints_Doctor.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170110131837_added_entity_constraints_Department.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

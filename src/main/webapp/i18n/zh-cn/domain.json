@@ -1,0 +1,29 @@
+{
+    "eheartApp": {
+        "domain" : {
+            "home": {
+                "title": "领域",
+                "createLabel": "添加领域",
+                "createOrEditLabel": "添加/编辑领域",
+                "search": "搜索 领域"
+            },
+            "created": "领域添加成功 {{ param }}",
+            "updated": "领域更新成功 {{ param }}",
+            "deleted": "领域删除成功 {{ param }}",
+            "delete": {
+                "question": "确定删除领域 {{ id }}?"
+            },
+            "detail": {
+                "title": "领域"
+            },
+            "name": "名称",
+            "domainPlaceholder1": "占位 1",
+            "domainPlaceholder2": "占位 2",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "doctor": "医生"
+        }
+    }
+}

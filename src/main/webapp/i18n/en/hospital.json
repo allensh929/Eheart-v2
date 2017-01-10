@@ -1,0 +1,31 @@
+{
+    "eheartApp": {
+        "hospital" : {
+            "home": {
+                "title": "Hospitals",
+                "createLabel": "Create a new Hospital",
+                "createOrEditLabel": "Create or edit a Hospital",
+                "search": "Search for Hospital"
+            },
+            "created": "A new Hospital is created with identifier {{ param }}",
+            "updated": "A Hospital is updated with identifier {{ param }}",
+            "deleted": "A Hospital is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Hospital {{ id }}?"
+            },
+            "detail": {
+                "title": "Hospital"
+            },
+            "name": "Name",
+            "description": "Description",
+            "hospitalPlaceholder1": "Hospital Placeholder 1",
+            "hospitalPlaceholder2": "Hospital Placeholder 2",
+            "hospitalPlaceholder3": "Hospital Placeholder 3",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By",
+            "department": "Department"
+        }
+    }
+}

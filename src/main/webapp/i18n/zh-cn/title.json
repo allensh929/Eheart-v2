@@ -1,0 +1,29 @@
+{
+    "eheartApp": {
+        "title" : {
+            "home": {
+                "title": "职称",
+                "createLabel": "添加职称",
+                "createOrEditLabel": "添加/编辑职称",
+                "search": "搜索 职称"
+            },
+            "created": "职称添加成功 {{ param }}",
+            "updated": "职称更新成功 {{ param }}",
+            "deleted": "职称删除成功 {{ param }}",
+            "delete": {
+                "question": "确定删除职称 {{ id }}?"
+            },
+            "detail": {
+                "title": "职称"
+            },
+            "name": "名称",
+            "description": "简介",
+            "titlePlaceholder1": "Title 占位 1",
+            "titlePlaceholder2": "Title 占位 2",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者"
+        }
+    }
+}

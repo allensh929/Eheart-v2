@@ -2,30 +2,30 @@
     "eheartApp": {
         "productCategory" : {
             "home": {
-                "title": "Product Categories",
-                "createLabel": "Create a new Product Category",
-                "createOrEditLabel": "Create or edit a Product Category",
-                "search": "Search for Product Category"
+                "title": "产品类别类别",
+                "createLabel": "添加产品类别",
+                "createOrEditLabel": "添加/编辑产品类别",
+                "search": "搜索 产品类别"
             },
-            "created": "A new Product Category is created with identifier {{ param }}",
-            "updated": "A Product Category is updated with identifier {{ param }}",
-            "deleted": "A Product Category is deleted with identifier {{ param }}",
+            "created": "产品类别添加成功 {{ param }}",
+            "updated": "产品类别更新成功 {{ param }}",
+            "deleted": "产品类别删除成功 {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Product Category {{ id }}?"
+                "question": "确定删除产品类别 {{ id }}?"
             },
             "detail": {
-                "title": "Product Category"
+                "title": "产品类别"
             },
-            "name": "Name",
-            "description": "Description",
-            "categoryPlaceholder1": "Category Placeholder 1",
-            "categoryPlaceholder2": "Category Placeholder 2",
-            "categoryPlaceholder3": "Category Placeholder 3",
-            "createdDate": "Created Date",
-            "createdBy": "Created By",
-            "lastModifiedDate": "Last Modified Date",
-            "lastModifiedBy": "Last Modified By",
-            "hasProducts": "Has Products"
+            "name": "名称",
+            "description": "简介",
+            "categoryPlaceholder1": "Category 占位 1",
+            "categoryPlaceholder2": "Category 占位 2",
+            "categoryPlaceholder3": "Category 占位 3",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "hasProducts": "产品类别"
         }
     }
 }

@@ -20,7 +20,7 @@ import java.util.Objects;
 @Table(name = "product_category")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "productcategory")
-public class ProductCategory implements Serializable {
+public class ProductCategory extends AbstractAuditingEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -44,17 +44,17 @@ public class ProductCategory implements Serializable {
     @Column(name = "category_placeholder_3")
     private String categoryPlaceholder3;
 
-    @Column(name = "created_date")
-    private ZonedDateTime createdDate;
+//    @Column(name = "created_date")
+//    private ZonedDateTime createdDate;
 
-    @Column(name = "created_by")
-    private String createdBy;
-
-    @Column(name = "last_modified_date")
-    private ZonedDateTime lastModifiedDate;
-
-    @Column(name = "last_modified_by")
-    private String lastModifiedBy;
+//    @Column(name = "created_by")
+//    private String createdBy;
+//
+//    @Column(name = "last_modified_date")
+//    private ZonedDateTime lastModifiedDate;
+//
+//    @Column(name = "last_modified_by")
+//    private String lastModifiedBy;
 
     @ManyToMany(mappedBy = "myCategorys")
     @JsonIgnore

@@ -108,3 +108,8 @@ To set up a CI environment, consult the [Setting up Continuous Integration][] pa
 [Karma]: http://karma-runner.github.io/
 [Jasmine]: http://jasmine.github.io/2.0/introduction.html
 [Protractor]: https://angular.github.io/protractor/
+
+##Database log
+ALTER TABLE `eheart`.`product` 
+ADD COLUMN `is_new` TINYINT(1) NULL DEFAULT 0 AFTER `last_modified_by`,
+ADD COLUMN `favorite` TINYINT(1) NULL DEFAULT 0 AFTER `is_new`;

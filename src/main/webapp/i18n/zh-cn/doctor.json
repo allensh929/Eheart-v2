@@ -1,0 +1,40 @@
+{
+    "eheartApp": {
+        "doctor" : {
+            "home": {
+                "title": "门诊 医生",
+                "createLabel": "添加医生",
+                "createOrEditLabel": "添加/编辑医生",
+                "search": "搜索 医生"
+            },
+            "created": "医生添加成功 {{ param }}",
+            "updated": "医生更新成功 {{ param }}",
+            "deleted": "医生删除成功 {{ param }}",
+            "delete": {
+                "question": "确定删除医生 {{ id }}?"
+            },
+            "detail": {
+                "title": "医生"
+            },
+            "name": "名字",
+            "age": "年龄",
+            "experience": "工作经历",
+            "workingAge": "工龄",
+            "domainCustom": "擅长",
+            "phone": "手机",
+            "email": "邮箱",
+            "description": "简介",
+            "doctorPlaceholder1": "占位 1",
+            "doctorPlaceholder2": "占位 2",
+            "doctorPlaceholder3": "占位 3",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "myTitle": "职称",
+            "myHospital": "医院",
+            "myDepartment": "科室",
+            "domain": "领域"
+        }
+    }
+}

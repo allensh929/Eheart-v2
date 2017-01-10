@@ -2,36 +2,36 @@
     "eheartApp": {
         "eheart" : {
             "home": {
-                "title": "Ehearts",
-                "createLabel": "Create a new Eheart",
-                "createOrEditLabel": "Create or edit a Eheart",
-                "search": "Search for Eheart"
+                "title": "宜心健康",
+                "createLabel": "添加 宜心健康",
+                "createOrEditLabel": "编辑 宜心健康",
+                "search": "搜索 宜心健康"
             },
-            "created": "A new Eheart is created with identifier {{ param }}",
-            "updated": "A Eheart is updated with identifier {{ param }}",
-            "deleted": "A Eheart is deleted with identifier {{ param }}",
+            "created": "宜心健康添加成功 {{ param }}",
+            "updated": "宜心健康更新成功 {{ param }}",
+            "deleted": "宜心健康删除成功 {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Eheart {{ id }}?"
+                "question": "确定删除宜心健康 {{ id }}?"
             },
             "detail": {
-                "title": "Eheart"
+                "title": "宜心健康"
             },
-            "name": "Name",
-            "description": "Description",
+            "name": "名称",
+            "description": "简介",
             "logo": "Logo",
-            "email": "Email",
-            "phone": "Phone",
-            "fax": "Fax",
-            "address": "Address",
-            "wechat": "Wechat",
+            "email": "邮箱",
+            "phone": "电话",
+            "fax": "传真",
+            "address": "地址",
+            "wechat": "微信号",
             "copyright": "Copyright",
-            "eheartPlaceholder1": "Eheart Placeholder 1",
-            "eheartPlaceholder2": "Eheart Placeholder 2",
-            "eheartPlaceholder3": "Eheart Placeholder 3",
-            "createdDate": "Created Date",
-            "createdBy": "Created By",
-            "lastModifiedDate": "Last Modified Date",
-            "lastModifiedBy": "Last Modified By"
+            "eheartPlaceholder1": "占位 1",
+            "eheartPlaceholder2": "占位 2",
+            "eheartPlaceholder3": "占位 3",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者"
         }
     }
 }

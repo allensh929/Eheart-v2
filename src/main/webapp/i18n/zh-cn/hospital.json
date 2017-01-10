@@ -1,0 +1,31 @@
+{
+    "eheartApp": {
+        "hospital" : {
+            "home": {
+                "title": "医院",
+                "createLabel": "添加医院",
+                "createOrEditLabel": "添加/编辑医院",
+                "search": "搜索 医院"
+            },
+            "created": "医院添加成功 {{ param }}",
+            "updated": "医院更新成功 {{ param }}",
+            "deleted": "医院删除成功 {{ param }}",
+            "delete": {
+                "question": "确定删除医院 {{ id }}?"
+            },
+            "detail": {
+                "title": "医院"
+            },
+            "name": "名称",
+            "description": "简介",
+            "hospitalPlaceholder1": "Hospital 占位 1",
+            "hospitalPlaceholder2": "Hospital 占位 2",
+            "hospitalPlaceholder3": "Hospital 占位 3",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "department": "科室"
+        }
+    }
+}

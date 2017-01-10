@@ -1,0 +1,61 @@
+
+<div>
+    <h2><span data-translate="eheartApp.department.detail.title">Department</span> {{vm.department.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.department.name">Name</span></dt>
+        <dd>
+            <span>{{vm.department.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.description">Description</span></dt>
+        <dd>
+            <span>{{vm.department.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.departmentPlaceholder1">Department Placeholder 1</span></dt>
+        <dd>
+            <span>{{vm.department.departmentPlaceholder1}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.departmentPlaceholder2">Department Placeholder 2</span></dt>
+        <dd>
+            <span>{{vm.department.departmentPlaceholder2}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.departmentPlaceholder3">Department Placeholder 3</span></dt>
+        <dd>
+            <span>{{vm.department.departmentPlaceholder3}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.department.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.department.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.department.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.department.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.hospital">Hospital</span></dt>
+        <dd>
+            <span ng-repeat="hospital in vm.department.hospitals">
+                <a ui-sref="hospital-detail({id: hospital.id})">{{hospital.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="department-detail.edit({id:vm.department.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

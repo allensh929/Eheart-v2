@@ -1,0 +1,40 @@
+{
+    "eheartApp": {
+        "doctor" : {
+            "home": {
+                "title": "Doctors",
+                "createLabel": "Create a new Doctor",
+                "createOrEditLabel": "Create or edit a Doctor",
+                "search": "Search for Doctor"
+            },
+            "created": "A new Doctor is created with identifier {{ param }}",
+            "updated": "A Doctor is updated with identifier {{ param }}",
+            "deleted": "A Doctor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Doctor {{ id }}?"
+            },
+            "detail": {
+                "title": "Doctor"
+            },
+            "name": "Name",
+            "age": "Age",
+            "experience": "Experience",
+            "workingAge": "Working Age",
+            "domainCustom": "Domain Custom",
+            "phone": "Phone",
+            "email": "Email",
+            "description": "Description",
+            "doctorPlaceholder1": "Doctor Placeholder 1",
+            "doctorPlaceholder2": "Doctor Placeholder 2",
+            "doctorPlaceholder3": "Doctor Placeholder 3",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By",
+            "myTitle": "My Title",
+            "myHospital": "My Hospital",
+            "myDepartment": "My Department",
+            "domain": "Domain"
+        }
+    }
+}

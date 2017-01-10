@@ -1,3 +1,71 @@
+
+
+entity Domain {
+	name String,
+	domainPlaceholder1 String,
+	domainPlaceholder2 String,
+	domainPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Doctor {
+
+	name String,
+	age Integer,
+	experience String,
+	workingAge Integer,
+	domainCustom String,
+	phone String,
+	email String,
+	description String,
+	doctorPlaceholder1 String,
+	doctorPlaceholder2 String,
+	doctorPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Title {
+	name String,
+	description String,
+	titlePlaceholder1 String,
+	titlePlaceholder2 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Hospital {
+	name String,
+	description String,
+	hospitalPlaceholder1 String,
+	hospitalPlaceholder2 String,
+	hospitalPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity Department {
+	name String,
+	description String,
+	departmentPlaceholder1 String,
+	departmentPlaceholder2 String,
+	departmentPlaceholder3 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+
 entity ProductCategory {
 	name String required,
 	description String,
@@ -30,6 +98,8 @@ entity Product {
 	notes String,
 	inventory Integer,
 	total Integer,
+	isNew Boolean,
+	favorite Boolean,
 	productPlaceholder1 String,
 	productPlaceholder2 String,
 	productPlaceholder3 String,
@@ -97,7 +167,16 @@ relationship OneToMany {
 	SubMenu{hasSubMenu} to ThirdMenu{superMenu}
 }
 relationship ManyToMany {
-  Product{myCategorys} to ProductCategory{hasProducts}
+  Product{myCategorys} to ProductCategory{hasProducts},
+  Doctor{domain} to Domain{doctor},
+  Department{hospital} to Hospital{department}
+}
+
+relationship ManyToOne {
+  Doctor{myTitle} to Title,
+  Doctor{myHospital} to Hospital,
+  Doctor{myDepartment} to Department
+
 }
 
 paginate * with pagination

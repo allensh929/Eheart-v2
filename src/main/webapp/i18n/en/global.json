@@ -13,6 +13,11 @@
                 "menu": "Menu",
                 "subMenu": "Sub Menu",
                 "thirdMenu": "Third Menu",
+                "domain": "Domain",
+                "doctor": "Doctor",
+                "title": "Title",
+                "hospital": "Hospital",
+                "department": "Department",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

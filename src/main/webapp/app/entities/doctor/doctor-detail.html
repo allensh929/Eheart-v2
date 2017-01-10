@@ -1,0 +1,97 @@
+
+<div>
+    <h2><span data-translate="eheartApp.doctor.detail.title">Doctor</span> {{vm.doctor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.doctor.name">Name</span></dt>
+        <dd>
+            <span>{{vm.doctor.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.age">Age</span></dt>
+        <dd>
+            <span>{{vm.doctor.age}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.experience">Experience</span></dt>
+        <dd>
+            <span>{{vm.doctor.experience}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.workingAge">Working Age</span></dt>
+        <dd>
+            <span>{{vm.doctor.workingAge}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.domainCustom">Domain Custom</span></dt>
+        <dd>
+            <span>{{vm.doctor.domainCustom}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.phone">Phone</span></dt>
+        <dd>
+            <span>{{vm.doctor.phone}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.email">Email</span></dt>
+        <dd>
+            <span>{{vm.doctor.email}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.description">Description</span></dt>
+        <dd>
+            <span>{{vm.doctor.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.doctorPlaceholder1">Doctor Placeholder 1</span></dt>
+        <dd>
+            <span>{{vm.doctor.doctorPlaceholder1}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.doctorPlaceholder2">Doctor Placeholder 2</span></dt>
+        <dd>
+            <span>{{vm.doctor.doctorPlaceholder2}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.doctorPlaceholder3">Doctor Placeholder 3</span></dt>
+        <dd>
+            <span>{{vm.doctor.doctorPlaceholder3}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.doctor.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.doctor.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.doctor.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.doctor.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.myTitle">My Title</span></dt>
+        <dd>
+            <a ui-sref="title-detail({id:vm.doctor.myTitleId})">{{vm.doctor.myTitleId}}</a>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.myHospital">My Hospital</span></dt>
+        <dd>
+            <a ui-sref="hospital-detail({id:vm.doctor.myHospitalId})">{{vm.doctor.myHospitalId}}</a>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.myDepartment">My Department</span></dt>
+        <dd>
+            <a ui-sref="department-detail({id:vm.doctor.myDepartmentId})">{{vm.doctor.myDepartmentId}}</a>
+        </dd>
+        <dt><span data-translate="eheartApp.doctor.domain">Domain</span></dt>
+        <dd>
+            <span ng-repeat="domain in vm.doctor.domains">
+                <a ui-sref="domain-detail({id: domain.id})">{{domain.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="doctor-detail.edit({id:vm.doctor.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

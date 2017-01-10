@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Doctor.
+    -->
+    <changeSet id="20170110131834-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="my_title_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_my_title_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="title"/>
+
+        <addForeignKeyConstraint baseColumnNames="my_hospital_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_my_hospital_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hospital"/>
+
+        <addForeignKeyConstraint baseColumnNames="my_department_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_my_department_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="department"/>
+
+        <addForeignKeyConstraint baseColumnNames="doctors_id"
+                                 baseTableName="doctor_domain"
+                                 constraintName="fk_doctor_domain_doctors_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="doctor"/>
+        <addForeignKeyConstraint baseColumnNames="domains_id"
+                                 baseTableName="doctor_domain"
+                                 constraintName="fk_doctor_domain_domains_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="domain"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -19,7 +19,7 @@ import java.util.Objects;
 @Table(name = "product")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "product")
-public class Product implements Serializable {
+public class Product extends AbstractAuditingEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -85,6 +85,12 @@ public class Product implements Serializable {
     @Column(name = "total")
     private Integer total;
 
+    @Column(name = "is_new")
+    private Boolean isNew;
+
+    @Column(name = "favorite")
+    private Boolean favorite;
+
     @Column(name = "product_placeholder_1")
     private String productPlaceholder1;
 
@@ -94,17 +100,17 @@ public class Product implements Serializable {
     @Column(name = "product_placeholder_3")
     private String productPlaceholder3;
 
-    @Column(name = "created_date")
-    private ZonedDateTime createdDate;
-
-    @Column(name = "created_by")
-    private String createdBy;
-
-    @Column(name = "last_modified_date")
-    private ZonedDateTime lastModifiedDate;
-
-    @Column(name = "last_modified_by")
-    private String lastModifiedBy;
+//    @Column(name = "created_date")
+//    private ZonedDateTime createdDate;
+//
+//    @Column(name = "created_by")
+//    private String createdBy;
+//
+//    @Column(name = "last_modified_date")
+//    private ZonedDateTime lastModifiedDate;
+//
+//    @Column(name = "last_modified_by")
+//    private String lastModifiedBy;
 
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -368,6 +374,32 @@ public class Product implements Serializable {
         this.total = total;
     }
 
+    public Boolean isIsNew() {
+        return isNew;
+    }
+
+    public Product isNew(Boolean isNew) {
+        this.isNew = isNew;
+        return this;
+    }
+
+    public void setIsNew(Boolean isNew) {
+        this.isNew = isNew;
+    }
+
+    public Boolean isFavorite() {
+        return favorite;
+    }
+
+    public Product favorite(Boolean favorite) {
+        this.favorite = favorite;
+        return this;
+    }
+
+    public void setFavorite(Boolean favorite) {
+        this.favorite = favorite;
+    }
+
     public String getProductPlaceholder1() {
         return productPlaceholder1;
     }
@@ -527,6 +559,8 @@ public class Product implements Serializable {
             ", notes='" + notes + "'" +
             ", inventory='" + inventory + "'" +
             ", total='" + total + "'" +
+            ", isNew='" + isNew + "'" +
+            ", favorite='" + favorite + "'" +
             ", productPlaceholder1='" + productPlaceholder1 + "'" +
             ", productPlaceholder2='" + productPlaceholder2 + "'" +
             ", productPlaceholder3='" + productPlaceholder3 + "'" +

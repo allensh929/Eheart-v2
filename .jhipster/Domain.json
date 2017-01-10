@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "domain"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "domainPlaceholder1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "domainPlaceholder2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "domainPlaceholder3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170110131833",
+    "entityTableName": "domain",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -138,6 +138,18 @@
                      />
         </div>
         <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.isNew" for="field_isNew">Is New</label>
+            <input type="checkbox" class="form-control" name="isNew" id="field_isNew"
+                    ng-model="vm.product.isNew"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.product.favorite" for="field_favorite">Favorite</label>
+            <input type="checkbox" class="form-control" name="favorite" id="field_favorite"
+                    ng-model="vm.product.favorite"
+                     />
+        </div>
+        <div class="form-group">
             <label class="control-label" data-translate="eheartApp.product.productPlaceholder1" for="field_productPlaceholder1">Product Placeholder 1</label>
             <input type="text" class="form-control" name="productPlaceholder1" id="field_productPlaceholder1"
                     ng-model="vm.product.productPlaceholder1"
@@ -190,7 +202,7 @@
 
         <div class="form-group">
             <label data-translate="eheartApp.product.myCategorys" for="field_myCategorys">My Categorys</label>
-            <select class="form-control" id="field_myCategorys" multiple name="myCategorys" ng-model="vm.product.myCategorys" ng-options="productCategory as productCategory.name for productCategory in vm.productcategories track by productCategory.id"></select>
+            <select class="form-control" id="field_myCategorys" multiple name="myCategorys" ng-model="vm.product.myCategorys" ng-options="productCategory as productCategory.id for productCategory in vm.productcategories track by productCategory.id"></select>
         </div>
     </div>
     <div class="modal-footer">

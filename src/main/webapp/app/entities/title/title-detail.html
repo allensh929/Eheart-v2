@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="eheartApp.title.detail.title">Title</span> {{vm.title.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.title.name">Name</span></dt>
+        <dd>
+            <span>{{vm.title.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.description">Description</span></dt>
+        <dd>
+            <span>{{vm.title.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.titlePlaceholder1">Title Placeholder 1</span></dt>
+        <dd>
+            <span>{{vm.title.titlePlaceholder1}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.titlePlaceholder2">Title Placeholder 2</span></dt>
+        <dd>
+            <span>{{vm.title.titlePlaceholder2}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.title.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.title.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.title.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.title.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.title.lastModifiedBy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="title-detail.edit({id:vm.title.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -2,29 +2,29 @@
     "eheartApp": {
         "menu" : {
             "home": {
-                "title": "Menus",
-                "createLabel": "Create a new Menu",
-                "createOrEditLabel": "Create or edit a Menu",
-                "search": "Search for Menu"
+                "title": "主目录",
+                "createLabel": "添加主目录",
+                "createOrEditLabel": "添加/编辑主目录",
+                "search": "搜索 主目录"
             },
-            "created": "A new Menu is created with identifier {{ param }}",
-            "updated": "A Menu is updated with identifier {{ param }}",
-            "deleted": "A Menu is deleted with identifier {{ param }}",
+            "created": "主目录添加成功 {{ param }}",
+            "updated": "主目录更新成功 {{ param }}",
+            "deleted": "主目录删除成功 {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Menu {{ id }}?"
+                "question": "确定删除主目录 {{ id }}?"
             },
             "detail": {
-                "title": "Menu"
+                "title": "主目录"
             },
-            "name": "Name",
-            "description": "Description",
-            "seq": "Seq",
-            "link": "Link",
-            "createdDate": "Created Date",
-            "createdBy": "Created By",
-            "lastModifiedDate": "Last Modified Date",
-            "lastModifiedBy": "Last Modified By",
-            "hasSubMenu": "Has Sub Menu"
+            "name": "名称",
+            "description": "简介",
+            "seq": "序列号",
+            "link": "链接",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "hasSubMenu": "子菜单"
         }
     }
 }

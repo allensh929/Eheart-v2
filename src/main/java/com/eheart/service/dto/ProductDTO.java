@@ -54,6 +54,10 @@ public class ProductDTO implements Serializable {
 
     private Integer total;
 
+    private Boolean isNew;
+
+    private Boolean favorite;
+
     private String productPlaceholder1;
 
     private String productPlaceholder2;
@@ -211,6 +215,20 @@ public class ProductDTO implements Serializable {
     public void setTotal(Integer total) {
         this.total = total;
     }
+    public Boolean getIsNew() {
+        return isNew;
+    }
+
+    public void setIsNew(Boolean isNew) {
+        this.isNew = isNew;
+    }
+    public Boolean getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(Boolean favorite) {
+        this.favorite = favorite;
+    }
     public String getProductPlaceholder1() {
         return productPlaceholder1;
     }
@@ -313,6 +331,8 @@ public class ProductDTO implements Serializable {
             ", notes='" + notes + "'" +
             ", inventory='" + inventory + "'" +
             ", total='" + total + "'" +
+            ", isNew='" + isNew + "'" +
+            ", favorite='" + favorite + "'" +
             ", productPlaceholder1='" + productPlaceholder1 + "'" +
             ", productPlaceholder2='" + productPlaceholder2 + "'" +
             ", productPlaceholder3='" + productPlaceholder3 + "'" +

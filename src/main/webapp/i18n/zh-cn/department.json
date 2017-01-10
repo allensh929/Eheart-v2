@@ -1,0 +1,31 @@
+{
+    "eheartApp": {
+        "department" : {
+            "home": {
+                "title": "门诊 科室",
+                "createLabel": "添加科室",
+                "createOrEditLabel": "添加/编辑科室",
+                "search": "搜索 科室"
+            },
+            "created": "科室添加成功 {{ param }}",
+            "updated": "科室更新成功 {{ param }}",
+            "deleted": "科室删除成功 {{ param }}",
+            "delete": {
+                "question": "确定删除科室 {{ id }}?"
+            },
+            "detail": {
+                "title": "科室"
+            },
+            "name": "名称",
+            "description": "简介",
+            "departmentPlaceholder1": "占位 1",
+            "departmentPlaceholder2": "占位 2",
+            "departmentPlaceholder3": "占位 3",
+            "createdDate": "添加日期",
+            "createdBy": "添加者",
+            "lastModifiedDate": "更新日期",
+            "lastModifiedBy": "更新者",
+            "hospital": "医院"
+        }
+    }
+}

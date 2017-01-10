@@ -1,0 +1,31 @@
+{
+    "eheartApp": {
+        "department" : {
+            "home": {
+                "title": "Departments",
+                "createLabel": "Create a new Department",
+                "createOrEditLabel": "Create or edit a Department",
+                "search": "Search for Department"
+            },
+            "created": "A new Department is created with identifier {{ param }}",
+            "updated": "A Department is updated with identifier {{ param }}",
+            "deleted": "A Department is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Department {{ id }}?"
+            },
+            "detail": {
+                "title": "Department"
+            },
+            "name": "Name",
+            "description": "Description",
+            "departmentPlaceholder1": "Department Placeholder 1",
+            "departmentPlaceholder2": "Department Placeholder 2",
+            "departmentPlaceholder3": "Department Placeholder 3",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By",
+            "hospital": "Hospital"
+        }
+    }
+}

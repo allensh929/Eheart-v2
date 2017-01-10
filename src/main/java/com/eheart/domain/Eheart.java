@@ -17,7 +17,7 @@ import java.util.Objects;
 @Table(name = "eheart")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "eheart")
-public class Eheart implements Serializable {
+public class Eheart extends AbstractAuditingEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -62,17 +62,17 @@ public class Eheart implements Serializable {
     @Column(name = "eheart_placeholder_3")
     private String eheartPlaceholder3;
 
-    @Column(name = "created_date")
-    private ZonedDateTime createdDate;
-
-    @Column(name = "created_by")
-    private String createdBy;
-
-    @Column(name = "last_modified_date")
-    private ZonedDateTime lastModifiedDate;
-
-    @Column(name = "last_modified_by")
-    private String lastModifiedBy;
+//    @Column(name = "created_date")
+//    private ZonedDateTime createdDate;
+//
+//    @Column(name = "created_by")
+//    private String createdBy;
+//
+//    @Column(name = "last_modified_date")
+//    private ZonedDateTime lastModifiedDate;
+//
+//    @Column(name = "last_modified_by")
+//    private String lastModifiedBy;
 
     public Long getId() {
         return id;

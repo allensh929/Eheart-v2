@@ -143,6 +143,8 @@
                                 notes: null,
                                 inventory: null,
                                 total: null,
+                                isNew: null,
+                                favorite: null,
                                 productPlaceholder1: null,
                                 productPlaceholder2: null,
                                 productPlaceholder3: null,

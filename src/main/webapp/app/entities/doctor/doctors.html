@@ -1,0 +1,117 @@
+<div>
+    <h2 data-translate="eheartApp.doctor.home.title">Doctors</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="doctor.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="eheartApp.doctor.home.createLabel">
+                        Create new Doctor
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'eheartApp.doctor.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span data-translate="eheartApp.doctor.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="age"><span data-translate="eheartApp.doctor.age">Age</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="experience"><span data-translate="eheartApp.doctor.experience">Experience</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="workingAge"><span data-translate="eheartApp.doctor.workingAge">Working Age</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="domainCustom"><span data-translate="eheartApp.doctor.domainCustom">Domain Custom</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span data-translate="eheartApp.doctor.phone">Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="eheartApp.doctor.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span data-translate="eheartApp.doctor.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorPlaceholder1"><span data-translate="eheartApp.doctor.doctorPlaceholder1">Doctor Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorPlaceholder2"><span data-translate="eheartApp.doctor.doctorPlaceholder2">Doctor Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorPlaceholder3"><span data-translate="eheartApp.doctor.doctorPlaceholder3">Doctor Placeholder 3</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="eheartApp.doctor.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="eheartApp.doctor.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.doctor.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.doctor.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="myTitleId"><span data-translate="eheartApp.doctor.myTitle">My Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="myHospitalId"><span data-translate="eheartApp.doctor.myHospital">My Hospital</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="myDepartmentId"><span data-translate="eheartApp.doctor.myDepartment">My Department</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="doctor in vm.doctors track by doctor.id">
+                    <td><a ui-sref="doctor-detail({id:doctor.id})">{{doctor.id}}</a></td>
+                    <td>{{doctor.name}}</td>
+                    <td>{{doctor.age}}</td>
+                    <td>{{doctor.experience}}</td>
+                    <td>{{doctor.workingAge}}</td>
+                    <td>{{doctor.domainCustom}}</td>
+                    <td>{{doctor.phone}}</td>
+                    <td>{{doctor.email}}</td>
+                    <td>{{doctor.description}}</td>
+                    <td>{{doctor.doctorPlaceholder1}}</td>
+                    <td>{{doctor.doctorPlaceholder2}}</td>
+                    <td>{{doctor.doctorPlaceholder3}}</td>
+                    <td>{{doctor.createdDate | date:'medium'}}</td>
+                    <td>{{doctor.createdBy}}</td>
+                    <td>{{doctor.lastModifiedDate | date:'medium'}}</td>
+                    <td>{{doctor.lastModifiedBy}}</td>
+                    <td>
+                        <a ui-sref="title-detail({id:doctor.myTitleId})">{{doctor.myTitleId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="hospital-detail({id:doctor.myHospitalId})">{{doctor.myHospitalId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="department-detail({id:doctor.myDepartmentId})">{{doctor.myDepartmentId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="doctor-detail({id:doctor.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="doctor.edit({id:doctor.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="doctor.delete({id:doctor.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
