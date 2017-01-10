@@ -1,7 +1,7 @@
 {
     "home": {
-        "title": "欢迎, Java Hipster!",
-        "subtitle": "这里是首页",
+        "title": "欢迎, 宜心健康科技有限公司!",
+        "subtitle": "",
         "logged": {
             "message": "您目前是以 \"{{username}}\" 账号登录."
         },

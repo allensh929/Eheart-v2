@@ -34,7 +34,7 @@ public class DoctorDTO implements Serializable {
 
     private String doctorPlaceholder2;
 
-    private String doctorPlaceholder3;
+    private String photo;
 
     private ZonedDateTime createdDate;
 
@@ -46,11 +46,11 @@ public class DoctorDTO implements Serializable {
 
 
     private Long myTitleId;
-    
+
     private Long myHospitalId;
-    
+
     private Long myDepartmentId;
-    
+
     private Set<DomainDTO> domains = new HashSet<>();
 
     public Long getId() {
@@ -130,12 +130,12 @@ public class DoctorDTO implements Serializable {
     public void setDoctorPlaceholder2(String doctorPlaceholder2) {
         this.doctorPlaceholder2 = doctorPlaceholder2;
     }
-    public String getDoctorPlaceholder3() {
-        return doctorPlaceholder3;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setDoctorPlaceholder3(String doctorPlaceholder3) {
-        this.doctorPlaceholder3 = doctorPlaceholder3;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
     public ZonedDateTime getCreatedDate() {
         return createdDate;
@@ -233,7 +233,7 @@ public class DoctorDTO implements Serializable {
             ", description='" + description + "'" +
             ", doctorPlaceholder1='" + doctorPlaceholder1 + "'" +
             ", doctorPlaceholder2='" + doctorPlaceholder2 + "'" +
-            ", doctorPlaceholder3='" + doctorPlaceholder3 + "'" +
+            ", photo='" + photo + "'" +
             ", createdDate='" + createdDate + "'" +
             ", createdBy='" + createdBy + "'" +
             ", lastModifiedDate='" + lastModifiedDate + "'" +

@@ -14,7 +14,9 @@
         </dd>
         <dt><span data-translate="eheartApp.product.img">Img</span></dt>
         <dd>
-            <span>{{vm.product.img}}</span>
+            <span>
+                <img ng-if="vm.product.img !=null" ng-src="{{IMAGE_ROOT}}{{vm.product.img}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+            </span>
         </dd>
         <dt><span data-translate="eheartApp.product.link">Link</span></dt>
         <dd>
@@ -119,7 +121,7 @@
         <dt><span data-translate="eheartApp.product.myCategorys">My Categorys</span></dt>
         <dd>
             <span ng-repeat="myCategorys in vm.product.myCategorys">
-                <a ui-sref="product-category-detail({id: myCategorys.id})">{{myCategorys.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="product-category-detail({id: myCategorys.id})">{{myCategorys.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>

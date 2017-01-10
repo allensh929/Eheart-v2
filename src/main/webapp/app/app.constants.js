@@ -5,6 +5,6 @@
         .module('eheartApp')
         .constant('VERSION', "0.0.1-SNAPSHOT")
         .constant('DEBUG_INFO_ENABLED', true)
-        .constant('IMAGE_ROOT', "http://127.0.0.1:8082/")
+        .constant('IMAGE_ROOT', "http://139.224.44.210:8082/")
 ;
 })();

@@ -37,13 +37,12 @@
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="name"><span data-translate="eheartApp.domain.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="domainPlaceholder1"><span data-translate="eheartApp.domain.domainPlaceholder1">Domain Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="domainPlaceholder2"><span data-translate="eheartApp.domain.domainPlaceholder2">Domain Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="domainPlaceholder3"><span data-translate="eheartApp.domain.domainPlaceholder3">Domain Placeholder 3</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdDate"><span data-translate="eheartApp.domain.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdBy"><span data-translate="eheartApp.domain.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.domain.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.domain.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="domainPlaceholder1"><span data-translate="eheartApp.domain.domainPlaceholder1">Domain Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="domainPlaceholder2"><span data-translate="eheartApp.domain.domainPlaceholder2">Domain Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdDate"><span data-translate="eheartApp.domain.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdBy"><span data-translate="eheartApp.domain.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.domain.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.domain.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
                     <th></th>
                 </tr>
             </thead>
@@ -51,13 +50,12 @@
                 <tr ng-repeat="domain in vm.domains track by domain.id">
                     <td><a ui-sref="domain-detail({id:domain.id})">{{domain.id}}</a></td>
                     <td>{{domain.name}}</td>
-                    <td>{{domain.domainPlaceholder1}}</td>
-                    <td>{{domain.domainPlaceholder2}}</td>
-                    <td>{{domain.domainPlaceholder3}}</td>
-                    <td>{{domain.createdDate | date:'medium'}}</td>
-                    <td>{{domain.createdBy}}</td>
-                    <td>{{domain.lastModifiedDate | date:'medium'}}</td>
-                    <td>{{domain.lastModifiedBy}}</td>
+                    <!--<td>{{domain.domainPlaceholder1}}</td>-->
+                    <!--<td>{{domain.domainPlaceholder2}}</td>-->
+                    <!--<td>{{domain.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{domain.createdBy}}</td>-->
+                    <!--<td>{{domain.lastModifiedDate | date:'medium'}}</td>-->
+                    <!--<td>{{domain.lastModifiedBy}}</td>-->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

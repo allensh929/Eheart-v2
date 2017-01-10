@@ -134,7 +134,7 @@
                                 description: null,
                                 doctorPlaceholder1: null,
                                 doctorPlaceholder2: null,
-                                doctorPlaceholder3: null,
+                                photo: null,
                                 createdDate: null,
                                 createdBy: null,
                                 lastModifiedDate: null,

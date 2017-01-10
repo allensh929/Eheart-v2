@@ -26,6 +26,17 @@
                      />
         </div>
         <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.doctor.photo" for="field_photo">Img</label>
+            <div>
+                <img ng-if="vm.doctor.photo !=null" ng-src="{{IMAGE_ROOT}}{{vm.doctor.photo}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+            </div>
+
+            <div id ="field_photo" class="button select-picture-button padding" accept="image/*"
+                 ngf-select="vm.onFileSelect(photo)" ng-model="photo" ngf-multiple="false">
+                <button class="btn btn-primary">选择图片</button>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="control-label" data-translate="eheartApp.doctor.experience" for="field_experience">Experience</label>
             <input type="text" class="form-control" name="experience" id="field_experience"
                     ng-model="vm.doctor.experience"
@@ -61,78 +72,78 @@
                     ng-model="vm.doctor.description"
                      />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder1" for="field_doctorPlaceholder1">Doctor Placeholder 1</label>
-            <input type="text" class="form-control" name="doctorPlaceholder1" id="field_doctorPlaceholder1"
-                    ng-model="vm.doctor.doctorPlaceholder1"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder2" for="field_doctorPlaceholder2">Doctor Placeholder 2</label>
-            <input type="text" class="form-control" name="doctorPlaceholder2" id="field_doctorPlaceholder2"
-                    ng-model="vm.doctor.doctorPlaceholder2"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder3" for="field_doctorPlaceholder3">Doctor Placeholder 3</label>
-            <input type="text" class="form-control" name="doctorPlaceholder3" id="field_doctorPlaceholder3"
-                    ng-model="vm.doctor.doctorPlaceholder3"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.createdDate" for="field_createdDate">Created Date</label>
-                <div class="input-group">
-                    <input id="field_createdDate" type="text" class="form-control" name="createdDate" datetime-picker="{{dateformat}}" ng-model="vm.doctor.createdDate" is-open="vm.datePickerOpenStatus.createdDate"
-                      />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdDate')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.createdBy" for="field_createdBy">Created By</label>
-            <input type="text" class="form-control" name="createdBy" id="field_createdBy"
-                    ng-model="vm.doctor.createdBy"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.lastModifiedDate" for="field_lastModifiedDate">Last Modified Date</label>
-                <div class="input-group">
-                    <input id="field_lastModifiedDate" type="text" class="form-control" name="lastModifiedDate" datetime-picker="{{dateformat}}" ng-model="vm.doctor.lastModifiedDate" is-open="vm.datePickerOpenStatus.lastModifiedDate"
-                      />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastModifiedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>
-            <input type="text" class="form-control" name="lastModifiedBy" id="field_lastModifiedBy"
-                    ng-model="vm.doctor.lastModifiedBy"
-                     />
-        </div>
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder1" for="field_doctorPlaceholder1">Doctor Placeholder 1</label>-->
+            <!--<input type="text" class="form-control" name="doctorPlaceholder1" id="field_doctorPlaceholder1"-->
+                    <!--ng-model="vm.doctor.doctorPlaceholder1"-->
+                     <!--/>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder2" for="field_doctorPlaceholder2">Doctor Placeholder 2</label>-->
+            <!--<input type="text" class="form-control" name="doctorPlaceholder2" id="field_doctorPlaceholder2"-->
+                    <!--ng-model="vm.doctor.doctorPlaceholder2"-->
+                     <!--/>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder3" for="field_doctorPlaceholder3">Doctor Placeholder 3</label>-->
+            <!--<input type="text" class="form-control" name="doctorPlaceholder3" id="field_doctorPlaceholder3"-->
+                    <!--ng-model="vm.doctor.doctorPlaceholder3"-->
+                     <!--/>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.createdDate" for="field_createdDate">Created Date</label>-->
+                <!--<div class="input-group">-->
+                    <!--<input id="field_createdDate" type="text" class="form-control" name="createdDate" datetime-picker="{{dateformat}}" ng-model="vm.doctor.createdDate" is-open="vm.datePickerOpenStatus.createdDate"-->
+                      <!--/>-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdDate')"><i class="glyphicon glyphicon-calendar"></i></button>-->
+                    <!--</span>-->
+                <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.createdBy" for="field_createdBy">Created By</label>-->
+            <!--<input type="text" class="form-control" name="createdBy" id="field_createdBy"-->
+                    <!--ng-model="vm.doctor.createdBy"-->
+                     <!--/>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.lastModifiedDate" for="field_lastModifiedDate">Last Modified Date</label>-->
+                <!--<div class="input-group">-->
+                    <!--<input id="field_lastModifiedDate" type="text" class="form-control" name="lastModifiedDate" datetime-picker="{{dateformat}}" ng-model="vm.doctor.lastModifiedDate" is-open="vm.datePickerOpenStatus.lastModifiedDate"-->
+                      <!--/>-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastModifiedDate')"><i class="glyphicon glyphicon-calendar"></i></button>-->
+                    <!--</span>-->
+                <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="eheartApp.doctor.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>-->
+            <!--<input type="text" class="form-control" name="lastModifiedBy" id="field_lastModifiedBy"-->
+                    <!--ng-model="vm.doctor.lastModifiedBy"-->
+                     <!--/>-->
+        <!--</div>-->
 
         <div class="form-group">
             <label data-translate="eheartApp.doctor.myTitle" for="field_myTitle">My Title</label>
-            <select class="form-control" id="field_myTitle" name="myTitle" ng-model="vm.doctor.myTitleId" ng-options="title.id as title.id for title in vm.titles"            >
+            <select class="form-control" id="field_myTitle" name="myTitle" ng-model="vm.doctor.myTitleId" ng-options="title.id as title.name for title in vm.titles"            >
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label data-translate="eheartApp.doctor.myHospital" for="field_myHospital">My Hospital</label>
-            <select class="form-control" id="field_myHospital" name="myHospital" ng-model="vm.doctor.myHospitalId" ng-options="hospital.id as hospital.id for hospital in vm.hospitals"            >
+            <select class="form-control" id="field_myHospital" name="myHospital" ng-model="vm.doctor.myHospitalId" ng-options="hospital.id as hospital.name for hospital in vm.hospitals"            >
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label data-translate="eheartApp.doctor.myDepartment" for="field_myDepartment">My Department</label>
-            <select class="form-control" id="field_myDepartment" name="myDepartment" ng-model="vm.doctor.myDepartmentId" ng-options="department.id as department.id for department in vm.departments"            >
+            <select class="form-control" id="field_myDepartment" name="myDepartment" ng-model="vm.doctor.myDepartmentId" ng-options="department.id as department.name for department in vm.departments"            >
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label data-translate="eheartApp.doctor.domain" for="field_domain">Domain</label>
-            <select class="form-control" id="field_domain" multiple name="domain" ng-model="vm.doctor.domains" ng-options="domain as domain.id for domain in vm.domains track by domain.id"></select>
+            <select class="form-control" id="field_domain" multiple name="domain" ng-model="vm.doctor.domains" ng-options="domain as domain.name for domain in vm.domains track by domain.id"></select>
         </div>
     </div>
     <div class="modal-footer">

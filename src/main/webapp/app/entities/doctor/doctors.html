@@ -43,14 +43,14 @@
                     <th jh-sort-by="domainCustom"><span data-translate="eheartApp.doctor.domainCustom">Domain Custom</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="phone"><span data-translate="eheartApp.doctor.phone">Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="email"><span data-translate="eheartApp.doctor.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="description"><span data-translate="eheartApp.doctor.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="doctorPlaceholder1"><span data-translate="eheartApp.doctor.doctorPlaceholder1">Doctor Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="doctorPlaceholder2"><span data-translate="eheartApp.doctor.doctorPlaceholder2">Doctor Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="doctorPlaceholder3"><span data-translate="eheartApp.doctor.doctorPlaceholder3">Doctor Placeholder 3</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdDate"><span data-translate="eheartApp.doctor.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdBy"><span data-translate="eheartApp.doctor.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.doctor.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.doctor.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="description"><span data-translate="eheartApp.doctor.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="doctorPlaceholder1"><span data-translate="eheartApp.doctor.doctorPlaceholder1">Doctor Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="doctorPlaceholder2"><span data-translate="eheartApp.doctor.doctorPlaceholder2">Doctor Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="photo"><span data-translate="eheartApp.doctor.photo">photo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdDate"><span data-translate="eheartApp.doctor.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdBy"><span data-translate="eheartApp.doctor.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.doctor.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.doctor.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
                     <th jh-sort-by="myTitleId"><span data-translate="eheartApp.doctor.myTitle">My Title</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="myHospitalId"><span data-translate="eheartApp.doctor.myHospital">My Hospital</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="myDepartmentId"><span data-translate="eheartApp.doctor.myDepartment">My Department</span> <span class="glyphicon glyphicon-sort"></span></th>
@@ -67,14 +67,16 @@
                     <td>{{doctor.domainCustom}}</td>
                     <td>{{doctor.phone}}</td>
                     <td>{{doctor.email}}</td>
-                    <td>{{doctor.description}}</td>
-                    <td>{{doctor.doctorPlaceholder1}}</td>
-                    <td>{{doctor.doctorPlaceholder2}}</td>
-                    <td>{{doctor.doctorPlaceholder3}}</td>
-                    <td>{{doctor.createdDate | date:'medium'}}</td>
-                    <td>{{doctor.createdBy}}</td>
-                    <td>{{doctor.lastModifiedDate | date:'medium'}}</td>
-                    <td>{{doctor.lastModifiedBy}}</td>
+                    <!--<td>{{doctor.description}}</td>-->
+                    <!--<td>{{doctor.doctorPlaceholder1}}</td>-->
+                    <!--<td>{{doctor.doctorPlaceholder2}}</td>-->
+                    <td>
+                        <img ng-if="doctor.photo !=null" ng-src="{{IMAGE_ROOT}}{{doctor.photo}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+                    </td>
+                    <!--<td>{{doctor.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{doctor.createdBy}}</td>-->
+                    <!--<td>{{doctor.lastModifiedDate | date:'medium'}}</td>-->
+                    <!--<td>{{doctor.lastModifiedBy}}</td>-->
                     <td>
                         <a ui-sref="title-detail({id:doctor.myTitleId})">{{doctor.myTitleId}}</a>
                     </td>

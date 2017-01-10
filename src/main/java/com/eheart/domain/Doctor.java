@@ -56,8 +56,8 @@ public class Doctor extends AbstractAuditingEntity  implements Serializable {
     @Column(name = "doctor_placeholder_2")
     private String doctorPlaceholder2;
 
-    @Column(name = "doctor_placeholder_3")
-    private String doctorPlaceholder3;
+    @Column(name = "photo")
+    private String photo;
 
 //    @Column(name = "created_date")
 //    private ZonedDateTime createdDate;
@@ -225,17 +225,17 @@ public class Doctor extends AbstractAuditingEntity  implements Serializable {
         this.doctorPlaceholder2 = doctorPlaceholder2;
     }
 
-    public String getDoctorPlaceholder3() {
-        return doctorPlaceholder3;
+    public String getPhoto() {
+        return photo;
     }
 
-    public Doctor doctorPlaceholder3(String doctorPlaceholder3) {
-        this.doctorPlaceholder3 = doctorPlaceholder3;
+    public Doctor photo(String photo) {
+        this.photo = photo;
         return this;
     }
 
-    public void setDoctorPlaceholder3(String doctorPlaceholder3) {
-        this.doctorPlaceholder3 = doctorPlaceholder3;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public ZonedDateTime getCreatedDate() {
@@ -388,7 +388,7 @@ public class Doctor extends AbstractAuditingEntity  implements Serializable {
             ", description='" + description + "'" +
             ", doctorPlaceholder1='" + doctorPlaceholder1 + "'" +
             ", doctorPlaceholder2='" + doctorPlaceholder2 + "'" +
-            ", doctorPlaceholder3='" + doctorPlaceholder3 + "'" +
+            ", photo='" + photo + "'" +
             ", createdDate='" + createdDate + "'" +
             ", createdBy='" + createdBy + "'" +
             ", lastModifiedDate='" + lastModifiedDate + "'" +

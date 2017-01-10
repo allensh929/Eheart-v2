@@ -26,7 +26,7 @@
             "description": "简介",
             "doctorPlaceholder1": "占位 1",
             "doctorPlaceholder2": "占位 2",
-            "doctorPlaceholder3": "占位 3",
+            "photo": "照片",
             "createdDate": "添加日期",
             "createdBy": "添加者",
             "lastModifiedDate": "更新日期",

@@ -110,9 +110,14 @@ To set up a CI environment, consult the [Setting up Continuous Integration][] pa
 [Protractor]: https://angular.github.io/protractor/
 
 ##Database log
+
 ALTER TABLE `eheart`.`product` 
 ADD COLUMN `is_new` TINYINT(1) NULL DEFAULT 0 AFTER `last_modified_by`,
 ADD COLUMN `favorite` TINYINT(1) NULL DEFAULT 0 AFTER `is_new`;
+
+
+ALTER TABLE `eheart`.`doctor` 
+CHANGE COLUMN `doctor_placeholder_3` `photo` VARCHAR(255) NULL DEFAULT NULL ;
 
 
 ## Deploy Dev

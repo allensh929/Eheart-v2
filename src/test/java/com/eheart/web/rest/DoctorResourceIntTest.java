@@ -144,7 +144,7 @@ public class DoctorResourceIntTest {
                 .description(DEFAULT_DESCRIPTION)
                 .doctorPlaceholder1(DEFAULT_DOCTOR_PLACEHOLDER_1)
                 .doctorPlaceholder2(DEFAULT_DOCTOR_PLACEHOLDER_2)
-                .doctorPlaceholder3(DEFAULT_DOCTOR_PLACEHOLDER_3)
+                .photo(DEFAULT_DOCTOR_PLACEHOLDER_3)
                 .createdDate(DEFAULT_CREATED_DATE)
                 .createdBy(DEFAULT_CREATED_BY)
                 .lastModifiedDate(DEFAULT_LAST_MODIFIED_DATE)
@@ -185,7 +185,7 @@ public class DoctorResourceIntTest {
         assertThat(testDoctor.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testDoctor.getDoctorPlaceholder1()).isEqualTo(DEFAULT_DOCTOR_PLACEHOLDER_1);
         assertThat(testDoctor.getDoctorPlaceholder2()).isEqualTo(DEFAULT_DOCTOR_PLACEHOLDER_2);
-        assertThat(testDoctor.getDoctorPlaceholder3()).isEqualTo(DEFAULT_DOCTOR_PLACEHOLDER_3);
+        assertThat(testDoctor.getPhoto()).isEqualTo(DEFAULT_DOCTOR_PLACEHOLDER_3);
         assertThat(testDoctor.getCreatedDate()).isEqualTo(DEFAULT_CREATED_DATE);
         assertThat(testDoctor.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testDoctor.getLastModifiedDate()).isEqualTo(DEFAULT_LAST_MODIFIED_DATE);
@@ -238,7 +238,7 @@ public class DoctorResourceIntTest {
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
             .andExpect(jsonPath("$.[*].doctorPlaceholder1").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].doctorPlaceholder2").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_2.toString())))
-            .andExpect(jsonPath("$.[*].doctorPlaceholder3").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_3.toString())))
+            .andExpect(jsonPath("$.[*].photo").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_3.toString())))
             .andExpect(jsonPath("$.[*].createdDate").value(hasItem(sameInstant(DEFAULT_CREATED_DATE))))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(sameInstant(DEFAULT_LAST_MODIFIED_DATE))))
@@ -266,7 +266,7 @@ public class DoctorResourceIntTest {
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
             .andExpect(jsonPath("$.doctorPlaceholder1").value(DEFAULT_DOCTOR_PLACEHOLDER_1.toString()))
             .andExpect(jsonPath("$.doctorPlaceholder2").value(DEFAULT_DOCTOR_PLACEHOLDER_2.toString()))
-            .andExpect(jsonPath("$.doctorPlaceholder3").value(DEFAULT_DOCTOR_PLACEHOLDER_3.toString()))
+            .andExpect(jsonPath("$.photo").value(DEFAULT_DOCTOR_PLACEHOLDER_3.toString()))
             .andExpect(jsonPath("$.createdDate").value(sameInstant(DEFAULT_CREATED_DATE)))
             .andExpect(jsonPath("$.createdBy").value(DEFAULT_CREATED_BY.toString()))
             .andExpect(jsonPath("$.lastModifiedDate").value(sameInstant(DEFAULT_LAST_MODIFIED_DATE)))
@@ -302,7 +302,7 @@ public class DoctorResourceIntTest {
                 .description(UPDATED_DESCRIPTION)
                 .doctorPlaceholder1(UPDATED_DOCTOR_PLACEHOLDER_1)
                 .doctorPlaceholder2(UPDATED_DOCTOR_PLACEHOLDER_2)
-                .doctorPlaceholder3(UPDATED_DOCTOR_PLACEHOLDER_3)
+                .photo(UPDATED_DOCTOR_PLACEHOLDER_3)
                 .createdDate(UPDATED_CREATED_DATE)
                 .createdBy(UPDATED_CREATED_BY)
                 .lastModifiedDate(UPDATED_LAST_MODIFIED_DATE)
@@ -328,7 +328,7 @@ public class DoctorResourceIntTest {
         assertThat(testDoctor.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testDoctor.getDoctorPlaceholder1()).isEqualTo(UPDATED_DOCTOR_PLACEHOLDER_1);
         assertThat(testDoctor.getDoctorPlaceholder2()).isEqualTo(UPDATED_DOCTOR_PLACEHOLDER_2);
-        assertThat(testDoctor.getDoctorPlaceholder3()).isEqualTo(UPDATED_DOCTOR_PLACEHOLDER_3);
+        assertThat(testDoctor.getPhoto()).isEqualTo(UPDATED_DOCTOR_PLACEHOLDER_3);
         assertThat(testDoctor.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
         assertThat(testDoctor.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
         assertThat(testDoctor.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
@@ -402,7 +402,7 @@ public class DoctorResourceIntTest {
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
             .andExpect(jsonPath("$.[*].doctorPlaceholder1").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].doctorPlaceholder2").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_2.toString())))
-            .andExpect(jsonPath("$.[*].doctorPlaceholder3").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_3.toString())))
+            .andExpect(jsonPath("$.[*].photo").value(hasItem(DEFAULT_DOCTOR_PLACEHOLDER_3.toString())))
             .andExpect(jsonPath("$.[*].createdDate").value(hasItem(sameInstant(DEFAULT_CREATED_DATE))))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(sameInstant(DEFAULT_LAST_MODIFIED_DATE))))

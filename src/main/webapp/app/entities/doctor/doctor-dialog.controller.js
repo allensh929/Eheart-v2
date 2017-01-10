@@ -5,9 +5,9 @@
         .module('eheartApp')
         .controller('DoctorDialogController', DoctorDialogController);
 
-    DoctorDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Doctor', 'Title', 'Hospital', 'Department', 'Domain'];
+    DoctorDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Doctor', 'Title', 'Hospital', 'Department', 'Domain', 'Upload', 'Ahdin'];
 
-    function DoctorDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Doctor, Title, Hospital, Department, Domain) {
+    function DoctorDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Doctor, Title, Hospital, Department, Domain, Upload, Ahdin) {
         var vm = this;
 
         vm.doctor = entity;
@@ -19,6 +19,48 @@
         vm.hospitals = Hospital.query();
         vm.departments = Department.query();
         vm.domains = Domain.query();
+        vm.onFileSelect = onFileSelect;
+
+        function onFileSelect (uploadFile){
+
+            var uploadImageFile = function(compressedBlob) {
+                Upload.upload({
+
+                    url: '/api/upload',
+                    fields: {},
+                    file: compressedBlob,
+                    method: 'POST'
+
+                }).progress(function (evt) {
+
+                    var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                    console.log('progress: ' + progressPercentage + '% ');
+
+                }).success(function (data, status, headers, config) {
+
+                    //update the url
+                    vm.doctor.photo = data.file;
+
+                }).error(function (data, status, headers, config) {
+
+                    console.log('error status: ' + status);
+                });
+            };
+
+
+            //TODO gif no compress
+            if (uploadFile != null) {
+                Ahdin.compress({
+                    sourceFile: uploadFile,
+                    maxWidth: 1280,
+                    maxHeight:1000,
+                    quality: 0.8
+                }).then(function(compressedBlob) {
+                    console.log('compressed image by ahdin.');
+                    uploadImageFile(compressedBlob);
+                });
+            }
+        }
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

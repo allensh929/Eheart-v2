@@ -43,7 +43,7 @@
         <dt><span data-translate="eheartApp.department.hospital">Hospital</span></dt>
         <dd>
             <span ng-repeat="hospital in vm.department.hospitals">
-                <a ui-sref="hospital-detail({id: hospital.id})">{{hospital.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="hospital-detail({id: hospital.id})">{{hospital.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>

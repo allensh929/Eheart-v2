@@ -36,18 +36,23 @@
         <dd>
             <span>{{vm.doctor.description}}</span>
         </dd>
-        <dt><span data-translate="eheartApp.doctor.doctorPlaceholder1">Doctor Placeholder 1</span></dt>
+        <dt><span data-translate="eheartApp.doctor.photo">
+
+        </span></dt>
         <dd>
-            <span>{{vm.doctor.doctorPlaceholder1}}</span>
+            <img ng-if="vm.doctor.photo !=null" ng-src="{{IMAGE_ROOT}}{{vm.doctor.photo}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
         </dd>
-        <dt><span data-translate="eheartApp.doctor.doctorPlaceholder2">Doctor Placeholder 2</span></dt>
-        <dd>
-            <span>{{vm.doctor.doctorPlaceholder2}}</span>
-        </dd>
-        <dt><span data-translate="eheartApp.doctor.doctorPlaceholder3">Doctor Placeholder 3</span></dt>
-        <dd>
-            <span>{{vm.doctor.doctorPlaceholder3}}</span>
-        </dd>
+        <!--<dd>-->
+            <!--<span>{{vm.doctor.doctorPlaceholder1}}</span>-->
+        <!--</dd>-->
+        <!--<dt><span data-translate="eheartApp.doctor.doctorPlaceholder2">Doctor Placeholder 2</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.doctor.doctorPlaceholder2}}</span>-->
+        <!--</dd>-->
+        <!--<dt><span data-translate="eheartApp.doctor.doctorPlaceholder3">Doctor Placeholder 3</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.doctor.doctorPlaceholder3}}</span>-->
+        <!--</dd>-->
         <dt><span data-translate="eheartApp.doctor.createdDate">Created Date</span></dt>
         <dd>
             <span>{{vm.doctor.createdDate | date:'medium'}}</span>
@@ -79,7 +84,7 @@
         <dt><span data-translate="eheartApp.doctor.domain">Domain</span></dt>
         <dd>
             <span ng-repeat="domain in vm.doctor.domains">
-                <a ui-sref="domain-detail({id: domain.id})">{{domain.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="domain-detail({id: domain.id})">{{domain.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>
