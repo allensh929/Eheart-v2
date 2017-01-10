@@ -45,13 +45,13 @@
                     <th jh-sort-by="address"><span data-translate="eheartApp.eheart.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="wechat"><span data-translate="eheartApp.eheart.wechat">Wechat</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="copyright"><span data-translate="eheartApp.eheart.copyright">Copyright</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="eheartPlaceholder1"><span data-translate="eheartApp.eheart.eheartPlaceholder1">Eheart Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="eheartPlaceholder2"><span data-translate="eheartApp.eheart.eheartPlaceholder2">Eheart Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="eheartPlaceholder3"><span data-translate="eheartApp.eheart.eheartPlaceholder3">Eheart Placeholder 3</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdDate"><span data-translate="eheartApp.eheart.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdBy"><span data-translate="eheartApp.eheart.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.eheart.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.eheart.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="eheartPlaceholder1"><span data-translate="eheartApp.eheart.eheartPlaceholder1">Eheart Placeholder 1</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="eheartPlaceholder2"><span data-translate="eheartApp.eheart.eheartPlaceholder2">Eheart Placeholder 2</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="eheartPlaceholder3"><span data-translate="eheartApp.eheart.eheartPlaceholder3">Eheart Placeholder 3</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdDate"><span data-translate="eheartApp.eheart.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdBy"><span data-translate="eheartApp.eheart.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.eheart.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.eheart.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
                     <th></th>
                 </tr>
             </thead>
@@ -60,20 +60,22 @@
                     <td><a ui-sref="eheart-detail({id:eheart.id})">{{eheart.id}}</a></td>
                     <td>{{eheart.name}}</td>
                     <td>{{eheart.description}}</td>
-                    <td>{{eheart.logo}}</td>
+                    <td>
+                        <img ng-if="eheart.logo !=null" ng-src="{{IMAGE_ROOT}}{{eheart.logo}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+                    </td>
                     <td>{{eheart.email}}</td>
                     <td>{{eheart.phone}}</td>
                     <td>{{eheart.fax}}</td>
                     <td>{{eheart.address}}</td>
                     <td>{{eheart.wechat}}</td>
                     <td>{{eheart.copyright}}</td>
-                    <td>{{eheart.eheartPlaceholder1}}</td>
-                    <td>{{eheart.eheartPlaceholder2}}</td>
-                    <td>{{eheart.eheartPlaceholder3}}</td>
-                    <td>{{eheart.createdDate | date:'medium'}}</td>
-                    <td>{{eheart.createdBy}}</td>
-                    <td>{{eheart.lastModifiedDate | date:'medium'}}</td>
-                    <td>{{eheart.lastModifiedBy}}</td>
+                    <!--<td>{{eheart.eheartPlaceholder1}}</td>-->
+                    <!--<td>{{eheart.eheartPlaceholder2}}</td>-->
+                    <!--<td>{{eheart.eheartPlaceholder3}}</td>-->
+                    <!--<td>{{eheart.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{eheart.createdBy}}</td>-->
+                    <!--<td>{{eheart.lastModifiedDate | date:'medium'}}</td>-->
+                    <!--<td>{{eheart.lastModifiedBy}}</td>-->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

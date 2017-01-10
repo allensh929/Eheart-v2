@@ -6,16 +6,17 @@
         .factory('stateHandler', stateHandler);
 
     stateHandler.$inject = ['$rootScope', '$state', '$sessionStorage', '$translate', 'JhiLanguageService', 'translationHandler', '$window',
-        'Auth', 'Principal', 'VERSION'];
+        'Auth', 'Principal', 'VERSION', 'IMAGE_ROOT'];
 
     function stateHandler($rootScope, $state, $sessionStorage, $translate, JhiLanguageService, translationHandler, $window,
-        Auth, Principal, VERSION) {
+        Auth, Principal, VERSION, IMAGE_ROOT) {
         return {
             initialize: initialize
         };
 
         function initialize() {
             $rootScope.VERSION = VERSION;
+            $rootScope.IMAGE_ROOT = IMAGE_ROOT;
 
             var stateChangeStart = $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams, fromState) {
                 $rootScope.toState = toState;

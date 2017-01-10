@@ -107,3 +107,8 @@ jhipster:
             host: localhost
             port: 5000
             queueSize: 512
+eheart:
+    upload:
+        path: /usr/local/src/eheart-image
+    download:
+        url: http://139.224.44.210:8082/
