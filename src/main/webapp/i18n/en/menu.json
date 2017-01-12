@@ -20,6 +20,7 @@
             "description": "Description",
             "seq": "Seq",
             "link": "Link",
+            "content": "Content",
             "createdDate": "Created Date",
             "createdBy": "Created By",
             "lastModifiedDate": "Last Modified Date",

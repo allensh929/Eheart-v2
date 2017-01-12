@@ -133,6 +133,7 @@ entity Menu {
 	description String,
 	seq Integer,
 	link String,
+	content String,
 	createdDate ZonedDateTime,
 	createdBy String,
 	lastModifiedDate ZonedDateTime,
