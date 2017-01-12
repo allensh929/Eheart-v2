@@ -24,6 +24,8 @@ public class ThirdMenuDTO implements Serializable {
 
     private String link;
 
+    private String content;
+
     private ZonedDateTime createdDate;
 
     private String createdBy;
@@ -69,6 +71,13 @@ public class ThirdMenuDTO implements Serializable {
 
     public void setLink(String link) {
         this.link = link;
+    }
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
     public ZonedDateTime getCreatedDate() {
         return createdDate;
@@ -136,6 +145,7 @@ public class ThirdMenuDTO implements Serializable {
             ", description='" + description + "'" +
             ", seq='" + seq + "'" +
             ", link='" + link + "'" +
+            ", content='" + content + "'" +
             ", createdDate='" + createdDate + "'" +
             ", createdBy='" + createdBy + "'" +
             ", lastModifiedDate='" + lastModifiedDate + "'" +

@@ -40,10 +40,11 @@
                     <th jh-sort-by="description"><span data-translate="eheartApp.thirdMenu.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="seq"><span data-translate="eheartApp.thirdMenu.seq">Seq</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="link"><span data-translate="eheartApp.thirdMenu.link">Link</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <!--<th jh-sort-by="createdDate"><span data-translate="eheartApp.thirdMenu.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
-                    <!--<th jh-sort-by="createdBy"><span data-translate="eheartApp.thirdMenu.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
-                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.thirdMenu.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
-                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.thirdMenu.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="content"><span data-translate="eheartApp.thirdMenu.content">Content</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="eheartApp.thirdMenu.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="eheartApp.thirdMenu.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="eheartApp.thirdMenu.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="eheartApp.thirdMenu.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="superMenuId"><span data-translate="eheartApp.thirdMenu.superMenu">Super Menu</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
@@ -55,10 +56,11 @@
                     <td>{{thirdMenu.description}}</td>
                     <td>{{thirdMenu.seq}}</td>
                     <td>{{thirdMenu.link}}</td>
-                    <!--<td>{{thirdMenu.createdDate | date:'medium'}}</td>-->
-                    <!--<td>{{thirdMenu.createdBy}}</td>-->
-                    <!--<td>{{thirdMenu.lastModifiedDate | date:'medium'}}</td>-->
-                    <!--<td>{{thirdMenu.lastModifiedBy}}</td>-->
+                    <td>{{thirdMenu.content}}</td>
+                    <td>{{thirdMenu.createdDate | date:'medium'}}</td>
+                    <td>{{thirdMenu.createdBy}}</td>
+                    <td>{{thirdMenu.lastModifiedDate | date:'medium'}}</td>
+                    <td>{{thirdMenu.lastModifiedBy}}</td>
                     <td>
                         <a ui-sref="sub-menu-detail({id:thirdMenu.superMenuId})">{{thirdMenu.superMenuId}}</a>
                     </td>

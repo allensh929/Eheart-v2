@@ -58,6 +58,9 @@ public class ThirdMenuResourceIntTest {
     private static final String DEFAULT_LINK = "AAAAAAAAAA";
     private static final String UPDATED_LINK = "BBBBBBBBBB";
 
+    private static final String DEFAULT_CONTENT = "AAAAAAAAAA";
+    private static final String UPDATED_CONTENT = "BBBBBBBBBB";
+
     private static final ZonedDateTime DEFAULT_CREATED_DATE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
     private static final ZonedDateTime UPDATED_CREATED_DATE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
 
@@ -117,6 +120,7 @@ public class ThirdMenuResourceIntTest {
                 .description(DEFAULT_DESCRIPTION)
                 .seq(DEFAULT_SEQ)
                 .link(DEFAULT_LINK)
+                .content(DEFAULT_CONTENT)
                 .createdDate(DEFAULT_CREATED_DATE)
                 .createdBy(DEFAULT_CREATED_BY)
                 .lastModifiedDate(DEFAULT_LAST_MODIFIED_DATE)
@@ -151,6 +155,7 @@ public class ThirdMenuResourceIntTest {
         assertThat(testThirdMenu.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testThirdMenu.getSeq()).isEqualTo(DEFAULT_SEQ);
         assertThat(testThirdMenu.getLink()).isEqualTo(DEFAULT_LINK);
+        assertThat(testThirdMenu.getContent()).isEqualTo(DEFAULT_CONTENT);
         assertThat(testThirdMenu.getCreatedDate()).isEqualTo(DEFAULT_CREATED_DATE);
         assertThat(testThirdMenu.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testThirdMenu.getLastModifiedDate()).isEqualTo(DEFAULT_LAST_MODIFIED_DATE);
@@ -216,6 +221,7 @@ public class ThirdMenuResourceIntTest {
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
             .andExpect(jsonPath("$.[*].seq").value(hasItem(DEFAULT_SEQ)))
             .andExpect(jsonPath("$.[*].link").value(hasItem(DEFAULT_LINK.toString())))
+            .andExpect(jsonPath("$.[*].content").value(hasItem(DEFAULT_CONTENT.toString())))
             .andExpect(jsonPath("$.[*].createdDate").value(hasItem(sameInstant(DEFAULT_CREATED_DATE))))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(sameInstant(DEFAULT_LAST_MODIFIED_DATE))))
@@ -237,6 +243,7 @@ public class ThirdMenuResourceIntTest {
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
             .andExpect(jsonPath("$.seq").value(DEFAULT_SEQ))
             .andExpect(jsonPath("$.link").value(DEFAULT_LINK.toString()))
+            .andExpect(jsonPath("$.content").value(DEFAULT_CONTENT.toString()))
             .andExpect(jsonPath("$.createdDate").value(sameInstant(DEFAULT_CREATED_DATE)))
             .andExpect(jsonPath("$.createdBy").value(DEFAULT_CREATED_BY.toString()))
             .andExpect(jsonPath("$.lastModifiedDate").value(sameInstant(DEFAULT_LAST_MODIFIED_DATE)))
@@ -266,6 +273,7 @@ public class ThirdMenuResourceIntTest {
                 .description(UPDATED_DESCRIPTION)
                 .seq(UPDATED_SEQ)
                 .link(UPDATED_LINK)
+                .content(UPDATED_CONTENT)
                 .createdDate(UPDATED_CREATED_DATE)
                 .createdBy(UPDATED_CREATED_BY)
                 .lastModifiedDate(UPDATED_LAST_MODIFIED_DATE)
@@ -285,6 +293,7 @@ public class ThirdMenuResourceIntTest {
         assertThat(testThirdMenu.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testThirdMenu.getSeq()).isEqualTo(UPDATED_SEQ);
         assertThat(testThirdMenu.getLink()).isEqualTo(UPDATED_LINK);
+        assertThat(testThirdMenu.getContent()).isEqualTo(UPDATED_CONTENT);
         assertThat(testThirdMenu.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
         assertThat(testThirdMenu.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
         assertThat(testThirdMenu.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
@@ -352,6 +361,7 @@ public class ThirdMenuResourceIntTest {
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
             .andExpect(jsonPath("$.[*].seq").value(hasItem(DEFAULT_SEQ)))
             .andExpect(jsonPath("$.[*].link").value(hasItem(DEFAULT_LINK.toString())))
+            .andExpect(jsonPath("$.[*].content").value(hasItem(DEFAULT_CONTENT.toString())))
             .andExpect(jsonPath("$.[*].createdDate").value(hasItem(sameInstant(DEFAULT_CREATED_DATE))))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY.toString())))
             .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(sameInstant(DEFAULT_LAST_MODIFIED_DATE))))

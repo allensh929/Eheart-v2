@@ -33,10 +33,10 @@ spring:
 #                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://139.224.44.210:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://localhost:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
-        password: EheartSh+12-7
+        password: root
 #        password: root
         hikari:
             maximumPoolSize: 100

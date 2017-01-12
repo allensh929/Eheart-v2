@@ -35,6 +35,10 @@
             "fieldType": "String"
         },
         {
+            "fieldName": "content",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "createdDate",
             "fieldType": "ZonedDateTime"
         },

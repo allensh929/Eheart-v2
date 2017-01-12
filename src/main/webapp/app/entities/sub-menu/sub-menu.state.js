@@ -128,6 +128,7 @@
                                 description: null,
                                 seq: null,
                                 link: null,
+                                content: null,
                                 createdDate: null,
                                 createdBy: null,
                                 lastModifiedDate: null,

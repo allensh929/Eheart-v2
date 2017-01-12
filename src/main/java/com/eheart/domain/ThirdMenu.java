@@ -17,7 +17,7 @@ import java.util.Objects;
 @Table(name = "third_menu")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "thirdmenu")
-public class ThirdMenu extends AbstractAuditingEntity implements Serializable {
+public class ThirdMenu implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,17 +38,20 @@ public class ThirdMenu extends AbstractAuditingEntity implements Serializable {
     @Column(name = "link")
     private String link;
 
-//    @Column(name = "created_date")
-//    private ZonedDateTime createdDate;
-//
-//    @Column(name = "created_by")
-//    private String createdBy;
-//
-//    @Column(name = "last_modified_date")
-//    private ZonedDateTime lastModifiedDate;
-//
-//    @Column(name = "last_modified_by")
-//    private String lastModifiedBy;
+    @Column(name = "content")
+    private String content;
+
+    @Column(name = "created_date")
+    private ZonedDateTime createdDate;
+
+    @Column(name = "created_by")
+    private String createdBy;
+
+    @Column(name = "last_modified_date")
+    private ZonedDateTime lastModifiedDate;
+
+    @Column(name = "last_modified_by")
+    private String lastModifiedBy;
 
     @ManyToOne
     private SubMenu superMenu;
@@ -111,6 +114,19 @@ public class ThirdMenu extends AbstractAuditingEntity implements Serializable {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public ThirdMenu content(String content) {
+        this.content = content;
+        return this;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public ZonedDateTime getCreatedDate() {
@@ -206,6 +222,7 @@ public class ThirdMenu extends AbstractAuditingEntity implements Serializable {
             ", description='" + description + "'" +
             ", seq='" + seq + "'" +
             ", link='" + link + "'" +
+            ", content='" + content + "'" +
             ", createdDate='" + createdDate + "'" +
             ", createdBy='" + createdBy + "'" +
             ", lastModifiedDate='" + lastModifiedDate + "'" +

@@ -80,7 +80,7 @@ class SubMenuGatlingTest extends Simulation {
             .exec(http("Create new subMenu")
             .post("/api/sub-menus")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "name":"SAMPLE_TEXT", "description":"SAMPLE_TEXT", "seq":"0", "link":"SAMPLE_TEXT", "createdDate":"2020-01-01T00:00:00.000Z", "createdBy":"SAMPLE_TEXT", "lastModifiedDate":"2020-01-01T00:00:00.000Z", "lastModifiedBy":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "name":"SAMPLE_TEXT", "description":"SAMPLE_TEXT", "seq":"0", "link":"SAMPLE_TEXT", "content":"SAMPLE_TEXT", "createdDate":"2020-01-01T00:00:00.000Z", "createdBy":"SAMPLE_TEXT", "lastModifiedDate":"2020-01-01T00:00:00.000Z", "lastModifiedBy":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_subMenu_url"))).exitHereIfFailed
             .pause(10)

@@ -62,10 +62,10 @@ public class AsyncSpringLiquibase extends SpringLiquibase {
     }
 
     protected void initDb() throws LiquibaseException {
-        StopWatch watch = new StopWatch();
-        watch.start();
-        super.afterPropertiesSet();
-        watch.stop();
-        logger.debug("Started Liquibase in {} ms", watch.getTotalTimeMillis());
+//        StopWatch watch = new StopWatch();
+//        watch.start();
+//        super.afterPropertiesSet();
+//        watch.stop();
+//        logger.debug("Started Liquibase in {} ms", watch.getTotalTimeMillis());
     }
 }

@@ -27,35 +27,39 @@
             <column name="name" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
-            
+
             <column name="description" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="seq" type="integer">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="link" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
+            <column name="content" type="varchar(2550)">
+                <constraints nullable="true" />
+            </column>
+
             <column name="created_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="super_menu_id" type="bigint">
                 <constraints nullable="true" />
             </column>
@@ -64,6 +68,6 @@
         </createTable>
         <dropDefaultValue tableName="sub_menu" columnName="created_date" columnDataType="datetime"/>
         <dropDefaultValue tableName="sub_menu" columnName="last_modified_date" columnDataType="datetime"/>
-        
+
     </changeSet>
 </databaseChangeLog>

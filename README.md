@@ -127,6 +127,12 @@ mvn -DskipTests=true -Pdev package
 
 -Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类。
 
+scp ./eheart-0.0.1-SNAPSHOT.war root@139.224.44.210:/opt/tomcat/
+
+sh /opt/tomcat/script.sh 
+
+
+
 ## Mysql
 
 vi /etc/mysql/my.cnf
@@ -138,7 +144,7 @@ sudo service mysql restart
 mysql -u root -p
 输入mysql密码
 
-grant all privileges on *.* to root@'%' identified by 'EheartSh+12-7' with grant option;
+grant all privileges on *.* to root@'%' identified by 'EheartSh+127' with grant option;
 flush privileges;
 
 ## Tomcat
