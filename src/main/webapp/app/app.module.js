@@ -20,7 +20,8 @@
             // 'ngAnimate',
             'ahdin',
             'ui.select',
-            'ngSanitize'
+            'ngSanitize',
+            'summernote'
         ])
         .run(run);
 
