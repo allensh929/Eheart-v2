@@ -109,6 +109,10 @@ To set up a CI environment, consult the [Setting up Continuous Integration][] pa
 [Jasmine]: http://jasmine.github.io/2.0/introduction.html
 [Protractor]: https://angular.github.io/protractor/
 
+## ssh server
+
+连接服务器 ssh root@139.224.44.210 输入密码
+
 ##Database log
 
 ALTER TABLE `eheart`.`product` 

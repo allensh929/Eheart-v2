@@ -33,11 +33,12 @@ spring:
 #                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
+#        url: jdbc:mysql://localhost:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://139.224.44.210:3306/eheart?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
-        password: root
 #        password: root
+        password: EheartSh+12-7
         hikari:
             maximumPoolSize: 100
             data-source-properties:
@@ -91,6 +92,13 @@ jhipster:
     cache: # Hibernate 2nd level cache, used by CacheConfiguration
         ehcache:
             maxBytesLocalHeap: 16M
+    cors: #By default CORS are not enabled. Uncomment to enable.
+        allowed-origins: "*"
+        allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+        allowed-headers: "*"
+        exposed-headers:
+        allow-credentials: true
+        max-age: 1800
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: eheart@localhost
         baseUrl: http://127.0.0.1:8080

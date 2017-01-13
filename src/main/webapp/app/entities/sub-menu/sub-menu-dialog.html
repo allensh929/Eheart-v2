@@ -49,7 +49,7 @@
                    ng-model="vm.subMenu.content"
             />
 
-            <summernote ng-model="vm.subMenu.content"></summernote>
+            <summernote id ="summernote1" height="300" ng-model="vm.subMenu.content" on-image-upload="imageUpload(files)" editable="editable" editor="editor"></summernote>
         </div>
         <!--<div class="form-group">-->
             <!--<label class="control-label" data-translate="eheartApp.subMenu.createdDate" for="field_createdDate">Created Date</label>-->
