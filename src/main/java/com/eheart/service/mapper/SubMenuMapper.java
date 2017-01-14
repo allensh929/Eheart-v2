@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Mapper for the entity SubMenu and its DTO SubMenuDTO.
  */
-@Mapper(componentModel = "spring", uses = {})
+@Mapper(componentModel = "spring", uses = {MenuMapper.class, ThirdMenuMapper.class})
 public interface SubMenuMapper {
 
     @Mapping(source = "superMenu.id", target = "superMenuId")
@@ -17,7 +17,7 @@ public interface SubMenuMapper {
 
     List<SubMenuDTO> subMenusToSubMenuDTOs(List<SubMenu> subMenus);
 
-    @Mapping(target = "hasSubMenus", ignore = true)
+    @Mapping(target = "hasSubMenus")
     @Mapping(source = "superMenuId", target = "superMenu")
     SubMenu subMenuDTOToSubMenu(SubMenuDTO subMenuDTO);
 

@@ -1,5 +1,7 @@
 package com.eheart.service.dto;
 
+import com.eheart.domain.ThirdMenu;
+
 import java.time.ZonedDateTime;
 import javax.validation.constraints.*;
 import java.io.Serializable;
@@ -36,7 +38,9 @@ public class SubMenuDTO implements Serializable {
 
 
     private Long superMenuId;
-    
+
+    private Set<ThirdMenu> hasSubMenus = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -114,6 +118,14 @@ public class SubMenuDTO implements Serializable {
 
     public void setSuperMenuId(Long menuId) {
         this.superMenuId = menuId;
+    }
+
+    public Set<ThirdMenu> getHasSubMenus() {
+        return hasSubMenus;
+    }
+
+    public void setHasSubMenus(Set<ThirdMenu> hasSubMenus) {
+        this.hasSubMenus = hasSubMenus;
     }
 
     @Override
