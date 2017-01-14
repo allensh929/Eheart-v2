@@ -39,7 +39,7 @@ public class SubMenuDTO implements Serializable {
 
     private Long superMenuId;
 
-    private Set<ThirdMenu> hasSubMenus = new HashSet<>();
+    private Set<ThirdMenuDTO> hasSubMenus = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -120,11 +120,11 @@ public class SubMenuDTO implements Serializable {
         this.superMenuId = menuId;
     }
 
-    public Set<ThirdMenu> getHasSubMenus() {
+    public Set<ThirdMenuDTO> getHasSubMenus() {
         return hasSubMenus;
     }
 
-    public void setHasSubMenus(Set<ThirdMenu> hasSubMenus) {
+    public void setHasSubMenus(Set<ThirdMenuDTO> hasSubMenus) {
         this.hasSubMenus = hasSubMenus;
     }
 

@@ -36,7 +36,7 @@ public class MenuDTO implements Serializable {
 
     private String lastModifiedBy;
 
-    private Set<SubMenu> hasSubMenus = new HashSet<>();
+    private Set<SubMenuDTO> hasSubMenus = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -109,11 +109,11 @@ public class MenuDTO implements Serializable {
         this.lastModifiedBy = lastModifiedBy;
     }
 
-    public Set<SubMenu> getHasSubMenus() {
+    public Set<SubMenuDTO> getHasSubMenus() {
         return hasSubMenus;
     }
 
-    public void setHasSubMenus(Set<SubMenu> hasSubMenus) {
+    public void setHasSubMenus(Set<SubMenuDTO> hasSubMenus) {
         this.hasSubMenus = hasSubMenus;
     }
 

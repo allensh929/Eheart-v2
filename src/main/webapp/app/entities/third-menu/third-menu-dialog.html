@@ -84,7 +84,7 @@
 
         <div class="form-group">
             <label data-translate="eheartApp.thirdMenu.superMenu" for="field_superMenu">Super Menu</label>
-            <select class="form-control" id="field_superMenu" name="superMenu" ng-model="vm.thirdMenu.superMenuId" ng-options="subMenu.id as subMenu.id for subMenu in vm.submenus"            >
+            <select class="form-control" id="field_superMenu" name="superMenu" ng-model="vm.thirdMenu.superMenuId" ng-options="subMenu.id as subMenu.name for subMenu in vm.submenus"            >
                 <option value=""></option>
             </select>
         </div>
