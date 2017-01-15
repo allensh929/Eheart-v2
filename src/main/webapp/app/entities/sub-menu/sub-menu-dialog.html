@@ -13,41 +13,58 @@
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.subMenu.id" readonly />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.subMenu.name" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
-                    ng-model="vm.subMenu.name"
-                    required />
-            <div ng-show="editForm.name.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.subMenu.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="vm.subMenu.name"
+                           required />
+                    <div ng-show="editForm.name.$invalid">
+                        <p class="help-block"
+                           ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
             </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.subMenu.seq" for="field_seq">Seq</label>
+                    <input type="number" class="form-control" name="seq" id="field_seq"
+                           ng-model="vm.subMenu.seq"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.subMenu.link" for="field_link">Link</label>
+                    <input type="text" class="form-control" name="link" id="field_link"
+                           ng-model="vm.subMenu.link"
+                    />
+                </div>
+            </div>
+
         </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.subMenu.description" for="field_description">Description</label>
-            <input type="text" class="form-control" name="description" id="field_description"
+            <textarea class="form-control" name="description" id="field_description"
                     ng-model="vm.subMenu.description"
                      />
         </div>
+
         <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.subMenu.seq" for="field_seq">Seq</label>
-            <input type="number" class="form-control" name="seq" id="field_seq"
-                    ng-model="vm.subMenu.seq"
-                     />
+            <label data-translate="eheartApp.subMenu.superMenu" for="field_superMenu">Super Menu</label>
+            <select class="form-control" id="field_superMenu" name="superMenu" ng-model="vm.subMenu.superMenuId" ng-options="menu.id as menu.name for menu in vm.menus"            >
+                <option value=""></option>
+            </select>
         </div>
         <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.subMenu.link" for="field_link">Link</label>
-            <input type="text" class="form-control" name="link" id="field_link"
-                    ng-model="vm.subMenu.link"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.subMenu.content" for="field_content">Content</label>
-            <input type="text" class="form-control" name="content" id="field_content"
-                   ng-model="vm.subMenu.content"
-            />
+            <label class="control-label" data-translate="eheartApp.subMenu.content" for="summernote1">Content</label>
+            <!--<input type="text" class="form-control" name="content" id="field_content"-->
+                   <!--ng-model="vm.subMenu.content"-->
+            <!--/>-->
 
             <summernote id ="summernote1" height="300" ng-model="vm.subMenu.content" on-image-upload="imageUpload(files)" editable="editable" editor="editor"></summernote>
         </div>
@@ -84,12 +101,7 @@
                      <!--/>-->
         <!--</div>-->
 
-        <div class="form-group">
-            <label data-translate="eheartApp.subMenu.superMenu" for="field_superMenu">Super Menu</label>
-            <select class="form-control" id="field_superMenu" name="superMenu" ng-model="vm.subMenu.superMenuId" ng-options="menu.id as menu.name for menu in vm.menus"            >
-                <option value=""></option>
-            </select>
-        </div>
+
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

@@ -27,15 +27,20 @@
         </div>
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.productCategory.description" for="field_description">Description</label>
-            <input type="text" class="form-control" name="description" id="field_description"
+            <textarea class="form-control" name="description" id="field_description"
                     ng-model="vm.productCategory.description"
                      />
         </div>
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.productCategory.img" for="field_img">Img</label>
-            <input type="text" class="form-control" name="img" id="field_img"
-                    ng-model="vm.productCategory.img"
-                     />
+            <div>
+                <img ng-if="vm.productCategory.img !=null" ng-src="{{IMAGE_ROOT}}{{vm.productCategory.img}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+            </div>
+            <div id ="field_img" class="button select-picture-button padding" accept="image/*"
+                 ngf-select="vm.onFileSelect(img)" ng-model="img" ngf-multiple="false">
+                <button class="btn btn-primary">选择图片</button>
+            </div>
+            <br>
         </div>
         <!--<div class="form-group">-->
             <!--<label class="control-label" data-translate="eheartApp.productCategory.categoryPlaceholder1" for="field_categoryPlaceholder1">Category Placeholder 1</label>-->

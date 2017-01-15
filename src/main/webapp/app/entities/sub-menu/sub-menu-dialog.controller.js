@@ -20,7 +20,6 @@
 
         function imageUpload (uploadFile){
             console.log('image upload:');
-            console.log('image upload:' + $scope.editor);
 
             var uploadImageFile = function(compressedBlob) {
                 Upload.upload({

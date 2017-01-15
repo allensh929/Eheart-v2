@@ -22,7 +22,7 @@
         </dd>
         <dt><span data-translate="eheartApp.thirdMenu.content">Content</span></dt>
         <dd>
-            <span>{{vm.thirdMenu.content}}</span>
+            <div ng-bind-html="vm.thirdMenu.content | trustAsHtml"></div>
         </dd>
         <dt><span data-translate="eheartApp.thirdMenu.createdDate">Created Date</span></dt>
         <dd>

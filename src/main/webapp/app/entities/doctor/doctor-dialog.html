@@ -13,18 +13,80 @@
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.doctor.id" readonly />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.name" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
-                    ng-model="vm.doctor.name"
-                     />
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.doctor.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="vm.doctor.name"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.doctor.phone" for="field_phone">Phone</label>
+                    <input type="text" class="form-control" name="phone" id="field_phone"
+                           ng-model="vm.doctor.phone"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.doctor.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           ng-model="vm.doctor.email"
+                    />
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.doctor.age" for="field_age">Age</label>
+                    <input type="number" class="form-control" name="age" id="field_age"
+                           ng-model="vm.doctor.age"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.doctor.workingAge" for="field_workingAge">Working Age</label>
+                    <input type="number" class="form-control" name="workingAge" id="field_workingAge"
+                           ng-model="vm.doctor.workingAge"
+                    />
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.age" for="field_age">Age</label>
-            <input type="number" class="form-control" name="age" id="field_age"
-                    ng-model="vm.doctor.age"
-                     />
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label data-translate="eheartApp.doctor.myTitle" for="field_myTitle">My Title</label>
+                    <select class="form-control" id="field_myTitle" name="myTitle" ng-model="vm.doctor.myTitleId" ng-options="title.id as title.name for title in vm.titles"            >
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label data-translate="eheartApp.doctor.myHospital" for="field_myHospital">My Hospital</label>
+                    <select class="form-control" id="field_myHospital" name="myHospital" ng-model="vm.doctor.myHospitalId" ng-options="hospital.id as hospital.name for hospital in vm.hospitals"            >
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label data-translate="eheartApp.doctor.myDepartment" for="field_myDepartment">My Department</label>
+                    <select class="form-control" id="field_myDepartment" name="myDepartment" ng-model="vm.doctor.myDepartmentId" ng-options="department.id as department.name for department in vm.departments"            >
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+
         </div>
+
+
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.doctor.photo" for="field_photo">Img</label>
             <div>
@@ -36,42 +98,28 @@
                 <button class="btn btn-primary">选择图片</button>
             </div>
         </div>
+
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.doctor.description" for="field_description">Description</label>
+            <textarea class="form-control" name="description" id="field_description"
+                   ng-model="vm.doctor.description"
+            />
+        </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.doctor.experience" for="field_experience">Experience</label>
-            <input type="text" class="form-control" name="experience" id="field_experience"
+            <textarea class="form-control" name="experience" id="field_experience"
                     ng-model="vm.doctor.experience"
                      />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.workingAge" for="field_workingAge">Working Age</label>
-            <input type="number" class="form-control" name="workingAge" id="field_workingAge"
-                    ng-model="vm.doctor.workingAge"
-                     />
-        </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.doctor.domainCustom" for="field_domainCustom">Domain Custom</label>
-            <input type="text" class="form-control" name="domainCustom" id="field_domainCustom"
+            <textarea class="form-control" name="domainCustom" id="field_domainCustom"
                     ng-model="vm.doctor.domainCustom"
                      />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.phone" for="field_phone">Phone</label>
-            <input type="text" class="form-control" name="phone" id="field_phone"
-                    ng-model="vm.doctor.phone"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.email" for="field_email">Email</label>
-            <input type="text" class="form-control" name="email" id="field_email"
-                    ng-model="vm.doctor.email"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.doctor.description" for="field_description">Description</label>
-            <input type="text" class="form-control" name="description" id="field_description"
-                    ng-model="vm.doctor.description"
-                     />
-        </div>
+
         <!--<div class="form-group">-->
             <!--<label class="control-label" data-translate="eheartApp.doctor.doctorPlaceholder1" for="field_doctorPlaceholder1">Doctor Placeholder 1</label>-->
             <!--<input type="text" class="form-control" name="doctorPlaceholder1" id="field_doctorPlaceholder1"-->
@@ -123,24 +171,7 @@
                      <!--/>-->
         <!--</div>-->
 
-        <div class="form-group">
-            <label data-translate="eheartApp.doctor.myTitle" for="field_myTitle">My Title</label>
-            <select class="form-control" id="field_myTitle" name="myTitle" ng-model="vm.doctor.myTitleId" ng-options="title.id as title.name for title in vm.titles"            >
-                <option value=""></option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label data-translate="eheartApp.doctor.myHospital" for="field_myHospital">My Hospital</label>
-            <select class="form-control" id="field_myHospital" name="myHospital" ng-model="vm.doctor.myHospitalId" ng-options="hospital.id as hospital.name for hospital in vm.hospitals"            >
-                <option value=""></option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label data-translate="eheartApp.doctor.myDepartment" for="field_myDepartment">My Department</label>
-            <select class="form-control" id="field_myDepartment" name="myDepartment" ng-model="vm.doctor.myDepartmentId" ng-options="department.id as department.name for department in vm.departments"            >
-                <option value=""></option>
-            </select>
-        </div>
+
         <div class="form-group">
             <label data-translate="eheartApp.doctor.domain" for="field_domain">Domain</label>
             <select class="form-control" id="field_domain" multiple name="domain" ng-model="vm.doctor.domains" ng-options="domain as domain.name for domain in vm.domains track by domain.id"></select>

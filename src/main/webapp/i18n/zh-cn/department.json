@@ -2,7 +2,7 @@
     "eheartApp": {
         "department" : {
             "home": {
-                "title": "门诊 科室",
+                "title": "科室",
                 "createLabel": "添加科室",
                 "createOrEditLabel": "添加/编辑科室",
                 "search": "搜索 科室"
@@ -16,7 +16,7 @@
             "detail": {
                 "title": "科室"
             },
-            "name": "名称",
+            "name": "科室名称",
             "description": "简介",
             "img": "图片",
             "departmentPlaceholder1": "占位 1",

@@ -2,19 +2,19 @@
     "eheartApp": {
         "productSubCategory" : {
             "home": {
-                "title": "产品类别类别",
-                "createLabel": "添加产品类别",
-                "createOrEditLabel": "添加/编辑产品类别",
-                "search": "搜索 产品类别"
+                "title": "产品子类别",
+                "createLabel": "添加产品子类别",
+                "createOrEditLabel": "添加/编辑产品子类别",
+                "search": "搜索 产品子类别"
             },
-            "created": "产品类别添加成功 {{ param }}",
-            "updated": "产品类别更新成功 {{ param }}",
-            "deleted": "产品类别删除成功 {{ param }}",
+            "created": "产品子类别添加成功 {{ param }}",
+            "updated": "产品子类别更新成功 {{ param }}",
+            "deleted": "产品子类别删除成功 {{ param }}",
             "delete": {
-                "question": "确定删除产品类别 {{ id }}?"
+                "question": "确定删除产品子类别 {{ id }}?"
             },
             "detail": {
-                "title": "产品类别"
+                "title": "产品子类别"
             },
             "name": "名称",
             "description": "简介",

@@ -2,7 +2,7 @@
     "eheartApp": {
         "productCategory" : {
             "home": {
-                "title": "产品类别类别",
+                "title": "产品类别",
                 "createLabel": "添加产品类别",
                 "createOrEditLabel": "添加/编辑产品类别",
                 "search": "搜索 产品类别"

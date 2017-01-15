@@ -13,22 +13,48 @@
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.department.id" readonly />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.department.name" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
-                    ng-model="vm.department.name"
-                     />
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.department.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="vm.department.name"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label data-translate="eheartApp.department.clinic" for="field_clinic">Clinic</label>
+                    <select class="form-control" id="field_clinic" name="clinic" ng-model="vm.department.clinicId" ng-options="clinic.id as clinic.name for clinic in vm.clinics"            >
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+
+            </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.department.description" for="field_description">Description</label>
-            <input type="text" class="form-control" name="description" id="field_description"
-                    ng-model="vm.department.description"
-                     />
-        </div>
+
+
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.department.img" for="field_img">Img</label>
-            <input type="text" class="form-control" name="img" id="field_img"
-                   ng-model="vm.department.img"
+            <div>
+                <img ng-if="vm.department.img !=null" ng-src="{{IMAGE_ROOT}}{{vm.department.img}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+            </div>
+            <div id ="field_img" class="button select-picture-button padding" accept="image/*"
+                 ngf-select="vm.onFileSelect(img)" ng-model="img" ngf-multiple="false">
+                <button class="btn btn-primary">选择图片</button>
+            </div>
+            <br>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" data-translate="eheartApp.department.description" for="field_description">Description</label>
+            <textarea class="form-control" name="description" id="field_description"
+                   ng-model="vm.department.description"
             />
         </div>
         <!--<div class="form-group">-->
@@ -86,12 +112,7 @@
             <label data-translate="eheartApp.department.hospital" for="field_hospital">Hospital</label>
             <select class="form-control" id="field_hospital" multiple name="hospital" ng-model="vm.department.hospitals" ng-options="hospital as hospital.name for hospital in vm.hospitals track by hospital.id"></select>
         </div>
-        <div class="form-group">
-            <label data-translate="eheartApp.department.clinic" for="field_clinic">Clinic</label>
-            <select class="form-control" id="field_clinic" name="clinic" ng-model="vm.department.clinicId" ng-options="clinic.id as clinic.name for clinic in vm.clinics"            >
-                <option value=""></option>
-            </select>
-        </div>
+
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

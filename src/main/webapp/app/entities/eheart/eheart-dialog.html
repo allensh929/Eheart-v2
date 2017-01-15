@@ -13,21 +13,84 @@
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.eheart.id" readonly />
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.name" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
-                    ng-model="vm.eheart.name"
-                    required />
-            <div ng-show="editForm.name.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="vm.eheart.name"
+                           required />
+                    <div ng-show="editForm.name.$invalid">
+                        <p class="help-block"
+                           ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           ng-model="vm.eheart.email"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.phone" for="field_phone">Phone</label>
+                    <input type="text" class="form-control" name="phone" id="field_phone"
+                           ng-model="vm.eheart.phone"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.fax" for="field_fax">Fax</label>
+                    <input type="text" class="form-control" name="fax" id="field_fax"
+                           ng-model="vm.eheart.fax"
+                    />
+                </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.wechat" for="field_wechat">Wechat</label>
+                    <input type="text" class="form-control" name="wechat" id="field_wechat"
+                           ng-model="vm.eheart.wechat"
+                    />
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.copyright" for="field_copyright">Copyright</label>
+                    <input type="text" class="form-control" name="copyright" id="field_copyright"
+                           ng-model="vm.eheart.copyright"
+                    />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <label class="control-label" data-translate="eheartApp.eheart.address" for="field_address">Address</label>
+                    <input type="text" class="form-control" name="address" id="field_address"
+                           ng-model="vm.eheart.address"
+                    />
+                </div>
+            </div>
+        </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="eheartApp.eheart.description" for="field_description">Description</label>
-            <input type="text" class="form-control" name="description" id="field_description"
+            <textarea class="form-control" name="description" id="field_description"
                     ng-model="vm.eheart.description"
                      />
         </div>
@@ -45,42 +108,12 @@
             <br>
         </div>
 
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.email" for="field_email">Email</label>
-            <input type="text" class="form-control" name="email" id="field_email"
-                    ng-model="vm.eheart.email"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.phone" for="field_phone">Phone</label>
-            <input type="text" class="form-control" name="phone" id="field_phone"
-                    ng-model="vm.eheart.phone"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.fax" for="field_fax">Fax</label>
-            <input type="text" class="form-control" name="fax" id="field_fax"
-                    ng-model="vm.eheart.fax"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.address" for="field_address">Address</label>
-            <input type="text" class="form-control" name="address" id="field_address"
-                    ng-model="vm.eheart.address"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.wechat" for="field_wechat">Wechat</label>
-            <input type="text" class="form-control" name="wechat" id="field_wechat"
-                    ng-model="vm.eheart.wechat"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="eheartApp.eheart.copyright" for="field_copyright">Copyright</label>
-            <input type="text" class="form-control" name="copyright" id="field_copyright"
-                    ng-model="vm.eheart.copyright"
-                     />
-        </div>
+
+
+
+
+
+
         <!--<div class="form-group">-->
             <!--<label class="control-label" data-translate="eheartApp.eheart.eheartPlaceholder1" for="field_eheartPlaceholder1">Eheart Placeholder 1</label>-->
             <!--<input type="text" class="form-control" name="eheartPlaceholder1" id="field_eheartPlaceholder1"-->
