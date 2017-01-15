@@ -1,22 +1,23 @@
 package com.eheart.service.mapper;
 
-import com.eheart.domain.*;
+import com.eheart.domain.ProductCategory;
 import com.eheart.service.dto.ProductCategoryDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-import org.mapstruct.*;
 import java.util.List;
 
 /**
  * Mapper for the entity ProductCategory and its DTO ProductCategoryDTO.
  */
-@Mapper(componentModel = "spring", uses = {})
+@Mapper(componentModel = "spring", uses = {ProductMapper.class})
 public interface ProductCategoryMapper {
 
     ProductCategoryDTO productCategoryToProductCategoryDTO(ProductCategory productCategory);
 
     List<ProductCategoryDTO> productCategoriesToProductCategoryDTOs(List<ProductCategory> productCategories);
 
-    @Mapping(target = "hasProducts", ignore = true)
+    @Mapping(target = "hasProducts")
     ProductCategory productCategoryDTOToProductCategory(ProductCategoryDTO productCategoryDTO);
 
     List<ProductCategory> productCategoryDTOsToProductCategories(List<ProductCategoryDTO> productCategoryDTOs);

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -23,6 +23,11 @@
             'ngSanitize',
             'summernote'
         ])
+        .filter('trustAsHtml', ['$sce', function ($sce) {
+            return function (text) {
+                return $sce.trustAsHtml(text);
+            };
+        }])
         .run(run);
 
     run.$inject = ['stateHandler', 'translationHandler'];

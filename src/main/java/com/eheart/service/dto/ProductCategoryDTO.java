@@ -1,11 +1,11 @@
 package com.eheart.service.dto;
 
-import java.time.ZonedDateTime;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.ZonedDateTime;
 import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
+import java.util.Set;
 
 
 /**
@@ -33,6 +33,8 @@ public class ProductCategoryDTO implements Serializable {
     private ZonedDateTime lastModifiedDate;
 
     private String lastModifiedBy;
+
+    private Set<ProductDTO> hasProducts = new HashSet<>();
 
 
     public Long getId() {
@@ -104,6 +106,14 @@ public class ProductCategoryDTO implements Serializable {
 
     public void setLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
+    }
+
+    public Set<ProductDTO> getHasProducts() {
+        return hasProducts;
+    }
+
+    public void setHasProducts(Set<ProductDTO> hasProducts) {
+        this.hasProducts = hasProducts;
     }
 
     @Override

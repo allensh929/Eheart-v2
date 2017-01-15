@@ -23,7 +23,7 @@
         <dt><span data-translate="eheartApp.subMenu.content">Content</span></dt>
         <dd>
             <!--<span>{{vm.subMenu.content}}</span>-->
-            <div ng-bind-html="vm.subMenu.content"></div>
+            <div ng-bind-html="vm.subMenu.content | trustAsHtml"></div>
         </dd>
         <dt><span data-translate="eheartApp.subMenu.createdDate">Created Date</span></dt>
         <dd>

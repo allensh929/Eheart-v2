@@ -5,11 +5,10 @@
         .module('eheartApp')
         .controller('SubMenuDialogController', SubMenuDialogController);
 
-    SubMenuDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'SubMenu', 'ThirdMenu', 'Menu', 'Upload', 'Ahdin'];
+    SubMenuDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'SubMenu', 'ThirdMenu', 'Menu', 'Upload', 'Ahdin', 'IMAGE_ROOT'];
 
-    function SubMenuDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, SubMenu, ThirdMenu, Menu, Upload, Ahdin) {
+    function SubMenuDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, SubMenu, ThirdMenu, Menu, Upload, Ahdin, IMAGE_ROOT) {
         var vm = this;
-
         vm.subMenu = entity;
         vm.clear = clear;
         vm.datePickerOpenStatus = {};
@@ -39,7 +38,7 @@
                 }).success(function (data, status, headers, config) {
 
                     //update the url
-                    var imgURL = "http://localhost:8082/"+ data.file;
+                    var imgURL = IMAGE_ROOT + data.file;
                     $scope.editor.summernote('insertImage', imgURL);
 
                 }).error(function (data, status, headers, config) {
