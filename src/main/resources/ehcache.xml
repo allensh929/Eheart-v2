@@ -58,5 +58,17 @@
 
     <cache alias="com.eheart.domain.Department.hospitals" uses-template="simple"/>
 
+    <cache alias="com.eheart.domain.ProductCategory.hasSubCategories" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Hospital.clinics" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Clinic" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Clinic.departments" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.Clinic.hospitals" uses-template="simple"/>
+
+    <cache alias="com.eheart.domain.ProductSubCategory" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

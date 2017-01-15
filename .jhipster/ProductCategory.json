@@ -2,6 +2,12 @@
     "fluentMethods": true,
     "relationships": [
         {
+            "relationshipType": "one-to-many",
+            "relationshipName": "hasSubCategory",
+            "otherEntityName": "productSubCategory",
+            "otherEntityRelationshipName": "superCategory"
+        },
+        {
             "relationshipType": "many-to-many",
             "relationshipName": "hasProducts",
             "otherEntityName": "product",
@@ -19,6 +25,10 @@
         },
         {
             "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "img",
             "fieldType": "String"
         },
         {

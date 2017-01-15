@@ -32,6 +32,10 @@
                 <constraints nullable="true" />
             </column>
             
+            <column name="img" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
             <column name="category_placeholder_1" type="varchar(255)">
                 <constraints nullable="true" />
             </column>

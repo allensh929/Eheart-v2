@@ -5,9 +5,9 @@
         .module('eheartApp')
         .controller('ProductCategoryDetailController', ProductCategoryDetailController);
 
-    ProductCategoryDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'ProductCategory', 'Product'];
+    ProductCategoryDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'ProductCategory', 'ProductSubCategory', 'Product'];
 
-    function ProductCategoryDetailController($scope, $rootScope, $stateParams, previousState, entity, ProductCategory, Product) {
+    function ProductCategoryDetailController($scope, $rootScope, $stateParams, previousState, entity, ProductCategory, ProductSubCategory, Product) {
         var vm = this;
 
         vm.productCategory = entity;

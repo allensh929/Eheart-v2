@@ -52,6 +52,9 @@ public class DepartmentResourceIntTest {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
+    private static final String DEFAULT_IMG = "AAAAAAAAAA";
+    private static final String UPDATED_IMG = "BBBBBBBBBB";
+
     private static final String DEFAULT_DEPARTMENT_PLACEHOLDER_1 = "AAAAAAAAAA";
     private static final String UPDATED_DEPARTMENT_PLACEHOLDER_1 = "BBBBBBBBBB";
 
@@ -118,6 +121,7 @@ public class DepartmentResourceIntTest {
         Department department = new Department()
                 .name(DEFAULT_NAME)
                 .description(DEFAULT_DESCRIPTION)
+                .img(DEFAULT_IMG)
                 .departmentPlaceholder1(DEFAULT_DEPARTMENT_PLACEHOLDER_1)
                 .departmentPlaceholder2(DEFAULT_DEPARTMENT_PLACEHOLDER_2)
                 .departmentPlaceholder3(DEFAULT_DEPARTMENT_PLACEHOLDER_3)
@@ -153,6 +157,7 @@ public class DepartmentResourceIntTest {
         Department testDepartment = departmentList.get(departmentList.size() - 1);
         assertThat(testDepartment.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testDepartment.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testDepartment.getImg()).isEqualTo(DEFAULT_IMG);
         assertThat(testDepartment.getDepartmentPlaceholder1()).isEqualTo(DEFAULT_DEPARTMENT_PLACEHOLDER_1);
         assertThat(testDepartment.getDepartmentPlaceholder2()).isEqualTo(DEFAULT_DEPARTMENT_PLACEHOLDER_2);
         assertThat(testDepartment.getDepartmentPlaceholder3()).isEqualTo(DEFAULT_DEPARTMENT_PLACEHOLDER_3);
@@ -200,6 +205,7 @@ public class DepartmentResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(department.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].img").value(hasItem(DEFAULT_IMG.toString())))
             .andExpect(jsonPath("$.[*].departmentPlaceholder1").value(hasItem(DEFAULT_DEPARTMENT_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].departmentPlaceholder2").value(hasItem(DEFAULT_DEPARTMENT_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].departmentPlaceholder3").value(hasItem(DEFAULT_DEPARTMENT_PLACEHOLDER_3.toString())))
@@ -222,6 +228,7 @@ public class DepartmentResourceIntTest {
             .andExpect(jsonPath("$.id").value(department.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.img").value(DEFAULT_IMG.toString()))
             .andExpect(jsonPath("$.departmentPlaceholder1").value(DEFAULT_DEPARTMENT_PLACEHOLDER_1.toString()))
             .andExpect(jsonPath("$.departmentPlaceholder2").value(DEFAULT_DEPARTMENT_PLACEHOLDER_2.toString()))
             .andExpect(jsonPath("$.departmentPlaceholder3").value(DEFAULT_DEPARTMENT_PLACEHOLDER_3.toString()))
@@ -252,6 +259,7 @@ public class DepartmentResourceIntTest {
         updatedDepartment
                 .name(UPDATED_NAME)
                 .description(UPDATED_DESCRIPTION)
+                .img(UPDATED_IMG)
                 .departmentPlaceholder1(UPDATED_DEPARTMENT_PLACEHOLDER_1)
                 .departmentPlaceholder2(UPDATED_DEPARTMENT_PLACEHOLDER_2)
                 .departmentPlaceholder3(UPDATED_DEPARTMENT_PLACEHOLDER_3)
@@ -272,6 +280,7 @@ public class DepartmentResourceIntTest {
         Department testDepartment = departmentList.get(departmentList.size() - 1);
         assertThat(testDepartment.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testDepartment.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testDepartment.getImg()).isEqualTo(UPDATED_IMG);
         assertThat(testDepartment.getDepartmentPlaceholder1()).isEqualTo(UPDATED_DEPARTMENT_PLACEHOLDER_1);
         assertThat(testDepartment.getDepartmentPlaceholder2()).isEqualTo(UPDATED_DEPARTMENT_PLACEHOLDER_2);
         assertThat(testDepartment.getDepartmentPlaceholder3()).isEqualTo(UPDATED_DEPARTMENT_PLACEHOLDER_3);
@@ -340,6 +349,7 @@ public class DepartmentResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(department.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].img").value(hasItem(DEFAULT_IMG.toString())))
             .andExpect(jsonPath("$.[*].departmentPlaceholder1").value(hasItem(DEFAULT_DEPARTMENT_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].departmentPlaceholder2").value(hasItem(DEFAULT_DEPARTMENT_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].departmentPlaceholder3").value(hasItem(DEFAULT_DEPARTMENT_PLACEHOLDER_3.toString())))

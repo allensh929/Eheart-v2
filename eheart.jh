@@ -23,7 +23,7 @@ entity Doctor {
 	description String,
 	doctorPlaceholder1 String,
 	doctorPlaceholder2 String,
-	doctorPlaceholder3 String,
+	photo String,
 	createdDate ZonedDateTime,
 	createdBy String,
 	lastModifiedDate ZonedDateTime,
@@ -44,6 +44,7 @@ entity Title {
 entity Hospital {
 	name String,
 	description String,
+	img String,
 	hospitalPlaceholder1 String,
 	hospitalPlaceholder2 String,
 	hospitalPlaceholder3 String,
@@ -53,9 +54,32 @@ entity Hospital {
 	lastModifiedBy String
 }
 
+entity Clinic {
+	name String,
+	description String,
+	img String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
+entity ProductSubCategory {
+	name String required,
+	description String,
+	img String,
+	subCategoryPlaceholder1 String,
+	subCategoryPlaceholder2 String,
+	createdDate ZonedDateTime,
+	createdBy String,
+	lastModifiedDate ZonedDateTime,
+	lastModifiedBy String
+}
+
 entity Department {
 	name String,
 	description String,
+	img String,
 	departmentPlaceholder1 String,
 	departmentPlaceholder2 String,
 	departmentPlaceholder3 String,
@@ -69,6 +93,7 @@ entity Department {
 entity ProductCategory {
 	name String required,
 	description String,
+	img String,
 	categoryPlaceholder1 String,
 	categoryPlaceholder2 String,
 	categoryPlaceholder3 String,
@@ -167,12 +192,15 @@ entity ThirdMenu {
 
 relationship OneToMany {
 	Menu{hasSubMenu} to SubMenu{superMenu},
-	SubMenu{hasSubMenu} to ThirdMenu{superMenu}
+	SubMenu{hasSubMenu} to ThirdMenu{superMenu},
+	ProductCategory{hasSubCategory} to ProductSubCategory{superCategory},
+	Clinic{department} to Department{clinic}
 }
 relationship ManyToMany {
   Product{myCategorys} to ProductCategory{hasProducts},
   Doctor{domain} to Domain{doctor},
-  Department{hospital} to Hospital{department}
+  Department{hospital} to Hospital{department},
+  Clinic{hospital} to Hospital{clinic}
 }
 
 relationship ManyToOne {

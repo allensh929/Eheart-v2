@@ -1,0 +1,53 @@
+
+<div>
+    <h2><span data-translate="eheartApp.clinic.detail.title">Clinic</span> {{vm.clinic.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="eheartApp.clinic.name">Name</span></dt>
+        <dd>
+            <span>{{vm.clinic.name}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.description">Description</span></dt>
+        <dd>
+            <span>{{vm.clinic.description}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.img">Img</span></dt>
+        <dd>
+            <span>{{vm.clinic.img}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.clinic.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.clinic.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.clinic.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.clinic.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="eheartApp.clinic.hospital">Hospital</span></dt>
+        <dd>
+            <span ng-repeat="hospital in vm.clinic.hospitals">
+                <a ui-sref="hospital-detail({id: hospital.id})">{{hospital.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="clinic-detail.edit({id:vm.clinic.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,31 @@
+{
+    "eheartApp": {
+        "productSubCategory" : {
+            "home": {
+                "title": "Product Sub Categories",
+                "createLabel": "Create a new Product Sub Category",
+                "createOrEditLabel": "Create or edit a Product Sub Category",
+                "search": "Search for Product Sub Category"
+            },
+            "created": "A new Product Sub Category is created with identifier {{ param }}",
+            "updated": "A Product Sub Category is updated with identifier {{ param }}",
+            "deleted": "A Product Sub Category is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product Sub Category {{ id }}?"
+            },
+            "detail": {
+                "title": "Product Sub Category"
+            },
+            "name": "Name",
+            "description": "Description",
+            "img": "Img",
+            "subCategoryPlaceholder1": "Sub Category Placeholder 1",
+            "subCategoryPlaceholder2": "Sub Category Placeholder 2",
+            "createdDate": "Created Date",
+            "createdBy": "Created By",
+            "lastModifiedDate": "Last Modified Date",
+            "lastModifiedBy": "Last Modified By",
+            "superCategory": "Super Category"
+        }
+    }
+}

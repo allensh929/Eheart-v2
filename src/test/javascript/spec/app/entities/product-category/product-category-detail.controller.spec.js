@@ -4,7 +4,7 @@ describe('Controller Tests', function() {
 
     describe('ProductCategory Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockProductCategory, MockProduct;
+        var MockEntity, MockPreviousState, MockProductCategory, MockProductSubCategory, MockProduct;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -13,6 +13,7 @@ describe('Controller Tests', function() {
             MockEntity = jasmine.createSpy('MockEntity');
             MockPreviousState = jasmine.createSpy('MockPreviousState');
             MockProductCategory = jasmine.createSpy('MockProductCategory');
+            MockProductSubCategory = jasmine.createSpy('MockProductSubCategory');
             MockProduct = jasmine.createSpy('MockProduct');
             
 
@@ -22,6 +23,7 @@ describe('Controller Tests', function() {
                 'entity': MockEntity,
                 'previousState': MockPreviousState,
                 'ProductCategory': MockProductCategory,
+                'ProductSubCategory': MockProductSubCategory,
                 'Product': MockProduct
             };
             createController = function() {

@@ -5,9 +5,9 @@
         .module('eheartApp')
         .controller('DepartmentDialogController', DepartmentDialogController);
 
-    DepartmentDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Department', 'Hospital'];
+    DepartmentDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Department', 'Hospital', 'Clinic'];
 
-    function DepartmentDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Department, Hospital) {
+    function DepartmentDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Department, Hospital, Clinic) {
         var vm = this;
 
         vm.department = entity;
@@ -16,6 +16,7 @@
         vm.openCalendar = openCalendar;
         vm.save = save;
         vm.hospitals = Hospital.query();
+        vm.clinics = Clinic.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

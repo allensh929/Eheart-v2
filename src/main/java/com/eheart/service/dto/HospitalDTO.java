@@ -18,6 +18,8 @@ public class HospitalDTO implements Serializable {
 
     private String description;
 
+    private String img;
+
     private String hospitalPlaceholder1;
 
     private String hospitalPlaceholder2;
@@ -53,6 +55,13 @@ public class HospitalDTO implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     public String getHospitalPlaceholder1() {
         return hospitalPlaceholder1;
@@ -131,6 +140,7 @@ public class HospitalDTO implements Serializable {
             "id=" + id +
             ", name='" + name + "'" +
             ", description='" + description + "'" +
+            ", img='" + img + "'" +
             ", hospitalPlaceholder1='" + hospitalPlaceholder1 + "'" +
             ", hospitalPlaceholder2='" + hospitalPlaceholder2 + "'" +
             ", hospitalPlaceholder3='" + hospitalPlaceholder3 + "'" +

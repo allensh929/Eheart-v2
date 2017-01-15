@@ -25,7 +25,9 @@
             "createdBy": "添加者",
             "lastModifiedDate": "更新日期",
             "lastModifiedBy": "更新者",
-            "department": "科室"
+            "department": "科室",
+            "img":"图片",
+            "clinic":"门诊"
         }
     }
 }

@@ -18,6 +18,8 @@ public class DepartmentDTO implements Serializable {
 
     private String description;
 
+    private String img;
+
     private String departmentPlaceholder1;
 
     private String departmentPlaceholder2;
@@ -35,6 +37,8 @@ public class DepartmentDTO implements Serializable {
 
     private Set<HospitalDTO> hospitals = new HashSet<>();
 
+    private Long clinicId;
+    
     public Long getId() {
         return id;
     }
@@ -55,6 +59,13 @@ public class DepartmentDTO implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     public String getDepartmentPlaceholder1() {
         return departmentPlaceholder1;
@@ -114,6 +125,14 @@ public class DepartmentDTO implements Serializable {
         this.hospitals = hospitals;
     }
 
+    public Long getClinicId() {
+        return clinicId;
+    }
+
+    public void setClinicId(Long clinicId) {
+        this.clinicId = clinicId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -141,6 +160,7 @@ public class DepartmentDTO implements Serializable {
             "id=" + id +
             ", name='" + name + "'" +
             ", description='" + description + "'" +
+            ", img='" + img + "'" +
             ", departmentPlaceholder1='" + departmentPlaceholder1 + "'" +
             ", departmentPlaceholder2='" + departmentPlaceholder2 + "'" +
             ", departmentPlaceholder3='" + departmentPlaceholder3 + "'" +

@@ -25,7 +25,9 @@
             "createdBy": "添加者",
             "lastModifiedDate": "更新日期",
             "lastModifiedBy": "更新者",
-            "hasProducts": "产品类别"
+            "hasProducts": "产品类别",
+            "img": "图片",
+            "hasSubCategory": "子类"
         }
     }
 }

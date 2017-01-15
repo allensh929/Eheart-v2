@@ -18,6 +18,8 @@
                 "title": "Title",
                 "hospital": "Hospital",
                 "department": "Department",
+                "clinic": "Clinic",
+                "productSubCategory": "Product Sub Category",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

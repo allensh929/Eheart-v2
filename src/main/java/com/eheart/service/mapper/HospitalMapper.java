@@ -17,6 +17,7 @@ public interface HospitalMapper {
     List<HospitalDTO> hospitalsToHospitalDTOs(List<Hospital> hospitals);
 
     @Mapping(target = "departments", ignore = true)
+    @Mapping(target = "clinics", ignore = true)
     Hospital hospitalDTOToHospital(HospitalDTO hospitalDTO);
 
     List<Hospital> hospitalDTOsToHospitals(List<HospitalDTO> hospitalDTOs);

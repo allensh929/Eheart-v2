@@ -126,6 +126,7 @@
                             return {
                                 name: null,
                                 description: null,
+                                img: null,
                                 hospitalPlaceholder1: null,
                                 hospitalPlaceholder2: null,
                                 hospitalPlaceholder3: null,

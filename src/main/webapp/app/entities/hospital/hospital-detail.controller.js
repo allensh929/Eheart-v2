@@ -5,9 +5,9 @@
         .module('eheartApp')
         .controller('HospitalDetailController', HospitalDetailController);
 
-    HospitalDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Hospital', 'Department'];
+    HospitalDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Hospital', 'Department', 'Clinic'];
 
-    function HospitalDetailController($scope, $rootScope, $stateParams, previousState, entity, Hospital, Department) {
+    function HospitalDetailController($scope, $rootScope, $stateParams, previousState, entity, Hospital, Department, Clinic) {
         var vm = this;
 
         vm.hospital = entity;

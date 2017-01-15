@@ -35,6 +35,9 @@ public class ProductCategory extends AbstractAuditingEntity implements Serializa
     @Column(name = "description")
     private String description;
 
+    @Column(name = "img")
+    private String img;
+
     @Column(name = "category_placeholder_1")
     private String categoryPlaceholder1;
 
@@ -46,7 +49,7 @@ public class ProductCategory extends AbstractAuditingEntity implements Serializa
 
 //    @Column(name = "created_date")
 //    private ZonedDateTime createdDate;
-
+//
 //    @Column(name = "created_by")
 //    private String createdBy;
 //
@@ -55,6 +58,11 @@ public class ProductCategory extends AbstractAuditingEntity implements Serializa
 //
 //    @Column(name = "last_modified_by")
 //    private String lastModifiedBy;
+
+    @OneToMany(mappedBy = "superCategory")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<ProductSubCategory> hasSubCategories = new HashSet<>();
 
     @ManyToMany(mappedBy = "myCategorys")
     @JsonIgnore
@@ -93,6 +101,19 @@ public class ProductCategory extends AbstractAuditingEntity implements Serializa
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public ProductCategory img(String img) {
+        this.img = img;
+        return this;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getCategoryPlaceholder1() {
@@ -186,6 +207,31 @@ public class ProductCategory extends AbstractAuditingEntity implements Serializa
         this.lastModifiedBy = lastModifiedBy;
     }
 
+    public Set<ProductSubCategory> getHasSubCategories() {
+        return hasSubCategories;
+    }
+
+    public ProductCategory hasSubCategories(Set<ProductSubCategory> productSubCategories) {
+        this.hasSubCategories = productSubCategories;
+        return this;
+    }
+
+    public ProductCategory addHasSubCategory(ProductSubCategory productSubCategory) {
+        hasSubCategories.add(productSubCategory);
+        productSubCategory.setSuperCategory(this);
+        return this;
+    }
+
+    public ProductCategory removeHasSubCategory(ProductSubCategory productSubCategory) {
+        hasSubCategories.remove(productSubCategory);
+        productSubCategory.setSuperCategory(null);
+        return this;
+    }
+
+    public void setHasSubCategories(Set<ProductSubCategory> productSubCategories) {
+        this.hasSubCategories = productSubCategories;
+    }
+
     public Set<Product> getHasProducts() {
         return hasProducts;
     }
@@ -237,6 +283,7 @@ public class ProductCategory extends AbstractAuditingEntity implements Serializa
             "id=" + id +
             ", name='" + name + "'" +
             ", description='" + description + "'" +
+            ", img='" + img + "'" +
             ", categoryPlaceholder1='" + categoryPlaceholder1 + "'" +
             ", categoryPlaceholder2='" + categoryPlaceholder2 + "'" +
             ", categoryPlaceholder3='" + categoryPlaceholder3 + "'" +

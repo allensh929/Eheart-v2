@@ -80,7 +80,7 @@ class ProductCategoryGatlingTest extends Simulation {
             .exec(http("Create new productCategory")
             .post("/api/product-categories")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "name":"SAMPLE_TEXT", "description":"SAMPLE_TEXT", "categoryPlaceholder1":"SAMPLE_TEXT", "categoryPlaceholder2":"SAMPLE_TEXT", "categoryPlaceholder3":"SAMPLE_TEXT", "createdDate":"2020-01-01T00:00:00.000Z", "createdBy":"SAMPLE_TEXT", "lastModifiedDate":"2020-01-01T00:00:00.000Z", "lastModifiedBy":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "name":"SAMPLE_TEXT", "description":"SAMPLE_TEXT", "img":"SAMPLE_TEXT", "categoryPlaceholder1":"SAMPLE_TEXT", "categoryPlaceholder2":"SAMPLE_TEXT", "categoryPlaceholder3":"SAMPLE_TEXT", "createdDate":"2020-01-01T00:00:00.000Z", "createdBy":"SAMPLE_TEXT", "lastModifiedDate":"2020-01-01T00:00:00.000Z", "lastModifiedBy":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_productCategory_url"))).exitHereIfFailed
             .pause(10)

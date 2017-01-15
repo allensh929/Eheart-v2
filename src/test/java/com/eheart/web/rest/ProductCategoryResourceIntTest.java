@@ -52,6 +52,9 @@ public class ProductCategoryResourceIntTest {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
+    private static final String DEFAULT_IMG = "AAAAAAAAAA";
+    private static final String UPDATED_IMG = "BBBBBBBBBB";
+
     private static final String DEFAULT_CATEGORY_PLACEHOLDER_1 = "AAAAAAAAAA";
     private static final String UPDATED_CATEGORY_PLACEHOLDER_1 = "BBBBBBBBBB";
 
@@ -118,6 +121,7 @@ public class ProductCategoryResourceIntTest {
         ProductCategory productCategory = new ProductCategory()
                 .name(DEFAULT_NAME)
                 .description(DEFAULT_DESCRIPTION)
+                .img(DEFAULT_IMG)
                 .categoryPlaceholder1(DEFAULT_CATEGORY_PLACEHOLDER_1)
                 .categoryPlaceholder2(DEFAULT_CATEGORY_PLACEHOLDER_2)
                 .categoryPlaceholder3(DEFAULT_CATEGORY_PLACEHOLDER_3)
@@ -153,6 +157,7 @@ public class ProductCategoryResourceIntTest {
         ProductCategory testProductCategory = productCategoryList.get(productCategoryList.size() - 1);
         assertThat(testProductCategory.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testProductCategory.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testProductCategory.getImg()).isEqualTo(DEFAULT_IMG);
         assertThat(testProductCategory.getCategoryPlaceholder1()).isEqualTo(DEFAULT_CATEGORY_PLACEHOLDER_1);
         assertThat(testProductCategory.getCategoryPlaceholder2()).isEqualTo(DEFAULT_CATEGORY_PLACEHOLDER_2);
         assertThat(testProductCategory.getCategoryPlaceholder3()).isEqualTo(DEFAULT_CATEGORY_PLACEHOLDER_3);
@@ -219,6 +224,7 @@ public class ProductCategoryResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(productCategory.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].img").value(hasItem(DEFAULT_IMG.toString())))
             .andExpect(jsonPath("$.[*].categoryPlaceholder1").value(hasItem(DEFAULT_CATEGORY_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].categoryPlaceholder2").value(hasItem(DEFAULT_CATEGORY_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].categoryPlaceholder3").value(hasItem(DEFAULT_CATEGORY_PLACEHOLDER_3.toString())))
@@ -241,6 +247,7 @@ public class ProductCategoryResourceIntTest {
             .andExpect(jsonPath("$.id").value(productCategory.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.img").value(DEFAULT_IMG.toString()))
             .andExpect(jsonPath("$.categoryPlaceholder1").value(DEFAULT_CATEGORY_PLACEHOLDER_1.toString()))
             .andExpect(jsonPath("$.categoryPlaceholder2").value(DEFAULT_CATEGORY_PLACEHOLDER_2.toString()))
             .andExpect(jsonPath("$.categoryPlaceholder3").value(DEFAULT_CATEGORY_PLACEHOLDER_3.toString()))
@@ -271,6 +278,7 @@ public class ProductCategoryResourceIntTest {
         updatedProductCategory
                 .name(UPDATED_NAME)
                 .description(UPDATED_DESCRIPTION)
+                .img(UPDATED_IMG)
                 .categoryPlaceholder1(UPDATED_CATEGORY_PLACEHOLDER_1)
                 .categoryPlaceholder2(UPDATED_CATEGORY_PLACEHOLDER_2)
                 .categoryPlaceholder3(UPDATED_CATEGORY_PLACEHOLDER_3)
@@ -291,6 +299,7 @@ public class ProductCategoryResourceIntTest {
         ProductCategory testProductCategory = productCategoryList.get(productCategoryList.size() - 1);
         assertThat(testProductCategory.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testProductCategory.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testProductCategory.getImg()).isEqualTo(UPDATED_IMG);
         assertThat(testProductCategory.getCategoryPlaceholder1()).isEqualTo(UPDATED_CATEGORY_PLACEHOLDER_1);
         assertThat(testProductCategory.getCategoryPlaceholder2()).isEqualTo(UPDATED_CATEGORY_PLACEHOLDER_2);
         assertThat(testProductCategory.getCategoryPlaceholder3()).isEqualTo(UPDATED_CATEGORY_PLACEHOLDER_3);
@@ -359,6 +368,7 @@ public class ProductCategoryResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(productCategory.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].img").value(hasItem(DEFAULT_IMG.toString())))
             .andExpect(jsonPath("$.[*].categoryPlaceholder1").value(hasItem(DEFAULT_CATEGORY_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].categoryPlaceholder2").value(hasItem(DEFAULT_CATEGORY_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].categoryPlaceholder3").value(hasItem(DEFAULT_CATEGORY_PLACEHOLDER_3.toString())))

@@ -33,6 +33,9 @@ public class Hospital extends AbstractAuditingEntity implements Serializable {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "img")
+    private String img;
+
     @Column(name = "hospital_placeholder_1")
     private String hospitalPlaceholder1;
 
@@ -58,6 +61,11 @@ public class Hospital extends AbstractAuditingEntity implements Serializable {
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Department> departments = new HashSet<>();
+
+    @ManyToMany(mappedBy = "hospitals")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Clinic> clinics = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -91,6 +99,19 @@ public class Hospital extends AbstractAuditingEntity implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public Hospital img(String img) {
+        this.img = img;
+        return this;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getHospitalPlaceholder1() {
@@ -209,6 +230,31 @@ public class Hospital extends AbstractAuditingEntity implements Serializable {
         this.departments = departments;
     }
 
+    public Set<Clinic> getClinics() {
+        return clinics;
+    }
+
+    public Hospital clinics(Set<Clinic> clinics) {
+        this.clinics = clinics;
+        return this;
+    }
+
+    public Hospital addClinic(Clinic clinic) {
+        clinics.add(clinic);
+        clinic.getHospitals().add(this);
+        return this;
+    }
+
+    public Hospital removeClinic(Clinic clinic) {
+        clinics.remove(clinic);
+        clinic.getHospitals().remove(this);
+        return this;
+    }
+
+    public void setClinics(Set<Clinic> clinics) {
+        this.clinics = clinics;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -235,6 +281,7 @@ public class Hospital extends AbstractAuditingEntity implements Serializable {
             "id=" + id +
             ", name='" + name + "'" +
             ", description='" + description + "'" +
+            ", img='" + img + "'" +
             ", hospitalPlaceholder1='" + hospitalPlaceholder1 + "'" +
             ", hospitalPlaceholder2='" + hospitalPlaceholder2 + "'" +
             ", hospitalPlaceholder3='" + hospitalPlaceholder3 + "'" +

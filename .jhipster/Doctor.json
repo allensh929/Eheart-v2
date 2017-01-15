@@ -70,7 +70,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "doctorPlaceholder3",
+            "fieldName": "photo",
             "fieldType": "String"
         },
         {

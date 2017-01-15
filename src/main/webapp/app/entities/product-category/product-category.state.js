@@ -126,6 +126,7 @@
                             return {
                                 name: null,
                                 description: null,
+                                img: null,
                                 categoryPlaceholder1: null,
                                 categoryPlaceholder2: null,
                                 categoryPlaceholder3: null,

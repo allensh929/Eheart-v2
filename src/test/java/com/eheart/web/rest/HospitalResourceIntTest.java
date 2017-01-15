@@ -52,6 +52,9 @@ public class HospitalResourceIntTest {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
+    private static final String DEFAULT_IMG = "AAAAAAAAAA";
+    private static final String UPDATED_IMG = "BBBBBBBBBB";
+
     private static final String DEFAULT_HOSPITAL_PLACEHOLDER_1 = "AAAAAAAAAA";
     private static final String UPDATED_HOSPITAL_PLACEHOLDER_1 = "BBBBBBBBBB";
 
@@ -118,10 +121,14 @@ public class HospitalResourceIntTest {
         Hospital hospital = new Hospital()
                 .name(DEFAULT_NAME)
                 .description(DEFAULT_DESCRIPTION)
+                .img(DEFAULT_IMG)
                 .hospitalPlaceholder1(DEFAULT_HOSPITAL_PLACEHOLDER_1)
                 .hospitalPlaceholder2(DEFAULT_HOSPITAL_PLACEHOLDER_2)
                 .hospitalPlaceholder3(DEFAULT_HOSPITAL_PLACEHOLDER_3)
-                ;
+                .createdDate(DEFAULT_CREATED_DATE)
+                .createdBy(DEFAULT_CREATED_BY)
+                .lastModifiedDate(DEFAULT_LAST_MODIFIED_DATE)
+                .lastModifiedBy(DEFAULT_LAST_MODIFIED_BY);
         return hospital;
     }
 
@@ -150,6 +157,7 @@ public class HospitalResourceIntTest {
         Hospital testHospital = hospitalList.get(hospitalList.size() - 1);
         assertThat(testHospital.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testHospital.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testHospital.getImg()).isEqualTo(DEFAULT_IMG);
         assertThat(testHospital.getHospitalPlaceholder1()).isEqualTo(DEFAULT_HOSPITAL_PLACEHOLDER_1);
         assertThat(testHospital.getHospitalPlaceholder2()).isEqualTo(DEFAULT_HOSPITAL_PLACEHOLDER_2);
         assertThat(testHospital.getHospitalPlaceholder3()).isEqualTo(DEFAULT_HOSPITAL_PLACEHOLDER_3);
@@ -197,6 +205,7 @@ public class HospitalResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(hospital.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].img").value(hasItem(DEFAULT_IMG.toString())))
             .andExpect(jsonPath("$.[*].hospitalPlaceholder1").value(hasItem(DEFAULT_HOSPITAL_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].hospitalPlaceholder2").value(hasItem(DEFAULT_HOSPITAL_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].hospitalPlaceholder3").value(hasItem(DEFAULT_HOSPITAL_PLACEHOLDER_3.toString())))
@@ -219,6 +228,7 @@ public class HospitalResourceIntTest {
             .andExpect(jsonPath("$.id").value(hospital.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.img").value(DEFAULT_IMG.toString()))
             .andExpect(jsonPath("$.hospitalPlaceholder1").value(DEFAULT_HOSPITAL_PLACEHOLDER_1.toString()))
             .andExpect(jsonPath("$.hospitalPlaceholder2").value(DEFAULT_HOSPITAL_PLACEHOLDER_2.toString()))
             .andExpect(jsonPath("$.hospitalPlaceholder3").value(DEFAULT_HOSPITAL_PLACEHOLDER_3.toString()))
@@ -249,10 +259,14 @@ public class HospitalResourceIntTest {
         updatedHospital
                 .name(UPDATED_NAME)
                 .description(UPDATED_DESCRIPTION)
+                .img(UPDATED_IMG)
                 .hospitalPlaceholder1(UPDATED_HOSPITAL_PLACEHOLDER_1)
                 .hospitalPlaceholder2(UPDATED_HOSPITAL_PLACEHOLDER_2)
                 .hospitalPlaceholder3(UPDATED_HOSPITAL_PLACEHOLDER_3)
-        ;
+                .createdDate(UPDATED_CREATED_DATE)
+                .createdBy(UPDATED_CREATED_BY)
+                .lastModifiedDate(UPDATED_LAST_MODIFIED_DATE)
+                .lastModifiedBy(UPDATED_LAST_MODIFIED_BY);
         HospitalDTO hospitalDTO = hospitalMapper.hospitalToHospitalDTO(updatedHospital);
 
         restHospitalMockMvc.perform(put("/api/hospitals")
@@ -266,6 +280,7 @@ public class HospitalResourceIntTest {
         Hospital testHospital = hospitalList.get(hospitalList.size() - 1);
         assertThat(testHospital.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testHospital.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testHospital.getImg()).isEqualTo(UPDATED_IMG);
         assertThat(testHospital.getHospitalPlaceholder1()).isEqualTo(UPDATED_HOSPITAL_PLACEHOLDER_1);
         assertThat(testHospital.getHospitalPlaceholder2()).isEqualTo(UPDATED_HOSPITAL_PLACEHOLDER_2);
         assertThat(testHospital.getHospitalPlaceholder3()).isEqualTo(UPDATED_HOSPITAL_PLACEHOLDER_3);
@@ -334,6 +349,7 @@ public class HospitalResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(hospital.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].img").value(hasItem(DEFAULT_IMG.toString())))
             .andExpect(jsonPath("$.[*].hospitalPlaceholder1").value(hasItem(DEFAULT_HOSPITAL_PLACEHOLDER_1.toString())))
             .andExpect(jsonPath("$.[*].hospitalPlaceholder2").value(hasItem(DEFAULT_HOSPITAL_PLACEHOLDER_2.toString())))
             .andExpect(jsonPath("$.[*].hospitalPlaceholder3").value(hasItem(DEFAULT_HOSPITAL_PLACEHOLDER_3.toString())))

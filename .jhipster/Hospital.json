@@ -7,6 +7,13 @@
             "otherEntityName": "department",
             "ownerSide": false,
             "otherEntityRelationshipName": "hospital"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "clinic",
+            "otherEntityName": "clinic",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "hospital"
         }
     ],
     "fields": [
@@ -16,6 +23,10 @@
         },
         {
             "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "img",
             "fieldType": "String"
         },
         {

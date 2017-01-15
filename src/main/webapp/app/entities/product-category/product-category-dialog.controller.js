@@ -5,9 +5,9 @@
         .module('eheartApp')
         .controller('ProductCategoryDialogController', ProductCategoryDialogController);
 
-    ProductCategoryDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'ProductCategory', 'Product'];
+    ProductCategoryDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'ProductCategory', 'ProductSubCategory', 'Product'];
 
-    function ProductCategoryDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, ProductCategory, Product) {
+    function ProductCategoryDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, ProductCategory, ProductSubCategory, Product) {
         var vm = this;
 
         vm.productCategory = entity;
@@ -15,6 +15,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
+        vm.productsubcategories = ProductSubCategory.query();
         vm.products = Product.query();
 
         $timeout(function (){

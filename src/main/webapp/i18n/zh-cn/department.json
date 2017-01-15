@@ -18,6 +18,7 @@
             },
             "name": "名称",
             "description": "简介",
+            "img": "图片",
             "departmentPlaceholder1": "占位 1",
             "departmentPlaceholder2": "占位 2",
             "departmentPlaceholder3": "占位 3",
@@ -25,7 +26,8 @@
             "createdBy": "添加者",
             "lastModifiedDate": "更新日期",
             "lastModifiedBy": "更新者",
-            "hospital": "医院"
+            "hospital": "医院",
+            "clinic": "门诊"
         }
     }
 }

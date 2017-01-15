@@ -1,5 +1,7 @@
 package com.eheart.service.dto;
 
+import com.eheart.domain.ProductSubCategory;
+
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
@@ -20,6 +22,8 @@ public class ProductCategoryDTO implements Serializable {
 
     private String description;
 
+    private String img;
+
     private String categoryPlaceholder1;
 
     private String categoryPlaceholder2;
@@ -36,6 +40,7 @@ public class ProductCategoryDTO implements Serializable {
 
     private Set<ProductDTO> hasProducts = new HashSet<>();
 
+    private Set<ProductSubCategoryDTO> hasSubCategories = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -57,6 +62,13 @@ public class ProductCategoryDTO implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
     public String getCategoryPlaceholder1() {
         return categoryPlaceholder1;
@@ -143,6 +155,7 @@ public class ProductCategoryDTO implements Serializable {
             "id=" + id +
             ", name='" + name + "'" +
             ", description='" + description + "'" +
+            ", img='" + img + "'" +
             ", categoryPlaceholder1='" + categoryPlaceholder1 + "'" +
             ", categoryPlaceholder2='" + categoryPlaceholder2 + "'" +
             ", categoryPlaceholder3='" + categoryPlaceholder3 + "'" +

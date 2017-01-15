@@ -32,6 +32,9 @@ public class Department extends AbstractAuditingEntity implements Serializable {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "img")
+    private String img;
+
     @Column(name = "department_placeholder_1")
     private String departmentPlaceholder1;
 
@@ -59,6 +62,9 @@ public class Department extends AbstractAuditingEntity implements Serializable {
                joinColumns = @JoinColumn(name="departments_id", referencedColumnName="ID"),
                inverseJoinColumns = @JoinColumn(name="hospitals_id", referencedColumnName="ID"))
     private Set<Hospital> hospitals = new HashSet<>();
+
+    @ManyToOne
+    private Clinic clinic;
 
     public Long getId() {
         return id;
@@ -92,6 +98,19 @@ public class Department extends AbstractAuditingEntity implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public Department img(String img) {
+        this.img = img;
+        return this;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getDepartmentPlaceholder1() {
@@ -210,6 +229,19 @@ public class Department extends AbstractAuditingEntity implements Serializable {
         this.hospitals = hospitals;
     }
 
+    public Clinic getClinic() {
+        return clinic;
+    }
+
+    public Department clinic(Clinic clinic) {
+        this.clinic = clinic;
+        return this;
+    }
+
+    public void setClinic(Clinic clinic) {
+        this.clinic = clinic;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -236,6 +268,7 @@ public class Department extends AbstractAuditingEntity implements Serializable {
             "id=" + id +
             ", name='" + name + "'" +
             ", description='" + description + "'" +
+            ", img='" + img + "'" +
             ", departmentPlaceholder1='" + departmentPlaceholder1 + "'" +
             ", departmentPlaceholder2='" + departmentPlaceholder2 + "'" +
             ", departmentPlaceholder3='" + departmentPlaceholder3 + "'" +

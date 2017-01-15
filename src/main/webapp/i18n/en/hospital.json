@@ -18,6 +18,7 @@
             },
             "name": "Name",
             "description": "Description",
+            "img": "Img",
             "hospitalPlaceholder1": "Hospital Placeholder 1",
             "hospitalPlaceholder2": "Hospital Placeholder 2",
             "hospitalPlaceholder3": "Hospital Placeholder 3",
@@ -25,7 +26,8 @@
             "createdBy": "Created By",
             "lastModifiedDate": "Last Modified Date",
             "lastModifiedBy": "Last Modified By",
-            "department": "Department"
+            "department": "Department",
+            "clinic": "Clinic"
         }
     }
 }

@@ -18,6 +18,8 @@
                 "title": "职称",
                 "hospital": "医院",
                 "department": "门诊科室",
+                "clinic": "门诊",
+                "productSubCategory": "产品子类别",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

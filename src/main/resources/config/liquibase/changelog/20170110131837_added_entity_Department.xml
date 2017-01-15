@@ -32,6 +32,10 @@
                 <constraints nullable="true" />
             </column>
             
+            <column name="img" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
             <column name="department_placeholder_1" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -60,6 +64,10 @@
                 <constraints nullable="true" />
             </column>
             
+            <column name="clinic_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
         <dropDefaultValue tableName="department" columnName="created_date" columnDataType="datetime"/>

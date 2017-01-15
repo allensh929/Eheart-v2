@@ -12,6 +12,10 @@
         <dd>
             <span>{{vm.department.description}}</span>
         </dd>
+        <dt><span data-translate="eheartApp.department.img">Img</span></dt>
+        <dd>
+            <span>{{vm.department.img}}</span>
+        </dd>
         <dt><span data-translate="eheartApp.department.departmentPlaceholder1">Department Placeholder 1</span></dt>
         <dd>
             <span>{{vm.department.departmentPlaceholder1}}</span>
@@ -45,6 +49,10 @@
             <span ng-repeat="hospital in vm.department.hospitals">
                 <a ui-sref="hospital-detail({id: hospital.id})">{{hospital.name}}</a>{{$last ? '' : ', '}}
             </span>
+        </dd>
+        <dt><span data-translate="eheartApp.department.clinic">Clinic</span></dt>
+        <dd>
+            <a ui-sref="clinic-detail({id:vm.department.clinicId})">{{vm.department.clinicId}}</a>
         </dd>
     </dl>
 
