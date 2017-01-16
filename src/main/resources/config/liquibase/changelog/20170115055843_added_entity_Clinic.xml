@@ -27,36 +27,36 @@
             <column name="name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
-            <column name="description" type="varchar(255)">
+
+            <column name="description" type="varchar(2000)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="img" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
         <dropDefaultValue tableName="clinic" columnName="created_date" columnDataType="datetime"/>
         <dropDefaultValue tableName="clinic" columnName="last_modified_date" columnDataType="datetime"/>
-        
+
         <createTable tableName="clinic_hospital">
             <column name="hospitals_id" type="bigint">
                 <constraints nullable="false"/>
@@ -67,6 +67,6 @@
         </createTable>
 
         <addPrimaryKey columnNames="clinics_id, hospitals_id" tableName="clinic_hospital"/>
-        
+
     </changeSet>
 </databaseChangeLog>

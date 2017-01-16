@@ -27,47 +27,47 @@
             <column name="name" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
-            
-            <column name="description" type="varchar(255)">
+
+            <column name="description" type="varchar(2000)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="img" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="category_placeholder_1" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="category_placeholder_2" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="category_placeholder_3" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
         <dropDefaultValue tableName="product_category" columnName="created_date" columnDataType="datetime"/>
         <dropDefaultValue tableName="product_category" columnName="last_modified_date" columnDataType="datetime"/>
-        
+
     </changeSet>
 </databaseChangeLog>

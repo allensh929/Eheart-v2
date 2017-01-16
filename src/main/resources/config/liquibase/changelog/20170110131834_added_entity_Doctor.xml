@@ -27,63 +27,63 @@
             <column name="name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="age" type="integer">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="experience" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="working_age" type="integer">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="domain_custom" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="phone" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="email" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
-            <column name="description" type="varchar(255)">
+
+            <column name="description" type="varchar(2000)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="doctor_placeholder_1" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="doctor_placeholder_2" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="doctor_placeholder_3" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="created_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_date" type="timestamp">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="last_modified_by" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="my_title_id" type="bigint">
                 <constraints nullable="true" />
             </column>
@@ -100,7 +100,7 @@
         </createTable>
         <dropDefaultValue tableName="doctor" columnName="created_date" columnDataType="datetime"/>
         <dropDefaultValue tableName="doctor" columnName="last_modified_date" columnDataType="datetime"/>
-        
+
         <createTable tableName="doctor_domain">
             <column name="domains_id" type="bigint">
                 <constraints nullable="false"/>
@@ -111,6 +111,6 @@
         </createTable>
 
         <addPrimaryKey columnNames="doctors_id, domains_id" tableName="doctor_domain"/>
-        
+
     </changeSet>
 </databaseChangeLog>
