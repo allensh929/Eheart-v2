@@ -51,7 +51,9 @@
                     <td><a ui-sref="clinic-detail({id:clinic.id})">{{clinic.id}}</a></td>
                     <td>{{clinic.name}}</td>
                     <td>{{clinic.description}}</td>
-                    <td>{{clinic.img}}</td>
+                    <td>
+                        <img ng-if="clinic.img !=null" ng-src="{{IMAGE_ROOT}}{{clinic.img}}" style="max-height: 20rem; max-width: 20rem; border-radius: 5px">
+                    </td>
                     <td>{{clinic.createdDate | date:'medium'}}</td>
                     <td>{{clinic.createdBy}}</td>
                     <td>{{clinic.lastModifiedDate | date:'medium'}}</td>
