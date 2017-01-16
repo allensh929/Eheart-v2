@@ -123,6 +123,57 @@ ADD COLUMN `favorite` TINYINT(1) NULL DEFAULT 0 AFTER `is_new`;
 ALTER TABLE `eheart`.`doctor` 
 CHANGE COLUMN `doctor_placeholder_3` `photo` VARCHAR(255) NULL DEFAULT NULL ;
 
+CREATE TABLE `clinic` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `created_date` timestamp NULL,
+  `created_by` varchar(255) DEFAULT NULL,
+  `last_modified_date` timestamp NULL,
+  `last_modified_by` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `clinic_hospital` (
+  `hospitals_id` bigint(20) NOT NULL,
+  `clinics_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`clinics_id`,`hospitals_id`),
+  KEY `fk_clinic_hospital_hospitals_id` (`hospitals_id`),
+  CONSTRAINT `fk_clinic_hospital_clinics_id` FOREIGN KEY (`clinics_id`) REFERENCES `clinic` (`id`),
+  CONSTRAINT `fk_clinic_hospital_hospitals_id` FOREIGN KEY (`hospitals_id`) REFERENCES `hospital` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `product_sub_category` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `sub_category_placeholder_1` varchar(255) DEFAULT NULL,
+  `sub_category_placeholder_2` varchar(255) DEFAULT NULL,
+  `created_date` timestamp NULL,
+  `created_by` varchar(255) DEFAULT NULL,
+  `last_modified_date` timestamp NULL,
+  `last_modified_by` varchar(255) DEFAULT NULL,
+  `super_category_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_product_sub_category_super_category_id` (`super_category_id`),
+  CONSTRAINT `fk_product_sub_category_super_category_id` FOREIGN KEY (`super_category_id`) REFERENCES `product_category` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+alter TABLE `department`
+add clinic_id bigint(20) null;
+
+alter TABLE `department`
+add img varchar(255) null;
+
+alter TABLE `hospital`
+add img varchar(255) null;
+
+alter TABLE `product_category`
+add img varchar(255) null;
+
 
 ## Deploy Dev
 mvn -DskipTests=true -Pdev package
